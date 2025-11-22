@@ -159,30 +159,6 @@
             color: var(--prune);
         }
 
-        .section-light {
-            margin-top: 22px;
-            padding: 18px 16px 20px;
-            background: rgba(95,18,63,0.04);
-            border-radius: 18px;
-        }
-
-        .section-light h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 1.05rem;
-            color: var(--prune);
-        }
-
-        .section-light ul {
-            margin: 0;
-            padding-left: 18px;
-            font-size: 0.95rem;
-        }
-
-        .section-light li {
-            margin-bottom: 6px;
-        }
-
         .contact {
             margin-top: 26px;
             font-size: 0.9rem;
@@ -208,25 +184,9 @@
 
         @media (min-width: 720px) {
             .page { padding: 28px 10px 44px; }
-
-            .hero img {
-                height: 320px;
-            }
-
-            .cards {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-
-            .card {
-                height: 100%;
-            }
-
-            .section-light {
-                display: grid;
-                grid-template-columns: 1.1fr 1fr;
-                column-gap: 18px;
-                align-items: start;
-            }
+            .hero img { height: 320px; }
+            .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .card { height: 100%; }
         }
     </style>
 </head>
@@ -235,15 +195,16 @@
 <div class="page">
 
     <header>
-        <img src="logo-simple-prune.png" alt="Logo EMPOWERFIT" class="logo">
+        <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
         <h1>EMPOWERFIT STUDIO</h1>
         <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
         <div class="tagline">Méthode claire. Résultats concrets. Yoga · Pilates · Musculation.</div>
 
         <div class="hero">
-            <img src="accueil-empowerfit.jpg" alt="Accueil EMPOWERFIT">
+            <img src="accueil-empowerfit.jpg.png" alt="Accueil EMPOWERFIT">
         </div>
 
+        <!-- À REMPLACER PLUS TARD PAR TON VRAI LIEN DE FORMULAIRE -->
         <a class="btn-main" href="https://VOTRE-LIEN-PREINSCRIPTION.com" target="_blank">
             Réserver mon bilan & offre fondatrice
         </a>
@@ -256,48 +217,50 @@
 
     <div class="cards">
 
-        <!-- CARTE 1 — PRÉ-OUVERTURE -->
+        <!-- 1 — PRÉ-OUVERTURE -->
         <div class="card">
             <div class="badge">PRÉ-OUVERTURE</div>
             <h3>Offre fondatrice limitée</h3>
             <p>
                 150 femmes seulement bénéficieront d'un tarif privilégié à vie,
-                bilan offert + 1 heure de coaching, et priorité sur les créneaux les plus demandés.
+                bilan offert + 1 heure de coaching et priorité sur les créneaux les plus demandés.
             </p>
-            <a class="btn-secondary" href="https://VOTRE-LIEN-PREINSCRIPTION.com" target="_blank">Je réserve ma place</a>
+            <a class="btn-secondary" href="offres-empowerfit.png.png" target="_blank">Voir l'offre fondatrice</a>
         </div>
 
-        <!-- CARTE 2 — PLANNING & ABONNEMENTS -->
+        <!-- 2 — PLANNING & ABONNEMENTS -->
         <div class="card">
             <div class="badge">Planning & Abonnements</div>
             <h3>Cours efficaces pas marketés</h3>
             <p>
-                Power Yoga · Power Pilates · PowerFit : trois cours signatures pensés pour les femmes actives,
-                efficaces, lisibles, et centrés sur des principes d’entraînement éprouvés.
+                Cours efficaces pas marketés : Power Yoga, Power Pilates, Power Fit.
+                Un planning lisible, pensé pour votre agenda d’adulte et votre charge mentale.
             </p>
-            <a class="btn-secondary" href="planning-empowerfit.png" target="_blank">Voir le planning</a>
-            <a class="btn-secondary" href="offres-empowerfit.png" target="_blank">Voir les abonnements</a>
+            <a class="btn-secondary" href="planning-empowerfit.png.png" target="_blank">Voir le planning</a>
+            <a class="btn-secondary" href="offres-empowerfit.png.png" target="_blank">Voir les abonnements</a>
         </div>
 
-        <!-- CARTE 3 — LE STUDIO -->
+        <!-- 3 — LE STUDIO -->
         <div class="card">
             <div class="badge">Le studio</div>
             <h3>Découvrir EMPOWERFIT Studio</h3>
             <p>
-                Un studio premium pensé pour les femmes de 30 ans et plus : planning épuré avec 3 cours ciblés,
-                ambiance cocooning, matériel sélectionné pour progresser sans se blesser.
+                Un studio premium pensé pour les femmes de 30 ans et plus : planning épuré avec 3 cours ciblés
+                et extrêmement efficaces. Ambiance cocooning, matériel choisi pour construire du muscle en sécurité.
             </p>
+            <!-- À REMPLACER PLUS TARD PAR LE LIEN DE TON SITE "NOTRE STUDIO" -->
             <a class="btn-secondary" href="https://VOTRE-LIEN-STUDIO.com" target="_blank">Voir le studio</a>
         </div>
 
-        <!-- CARTE 4 — PROGRAMMES EN LIGNE -->
+        <!-- 4 — PROGRAMMES EN LIGNE -->
         <div class="card">
             <div class="badge">Programmes en ligne</div>
             <h3>Coaching EMPOWERFIT à distance</h3>
             <p>
-                Programmes adaptés aux femmes actives : prise de muscle, équilibre hormonal, longévité.
-                Adaptés à chaque cycle de vie : active, post-partum, pré-ménopause, ménopause.
+                Programmes adaptés aux femmes actives : prise de muscle, santé hormonale,
+                post-partum, pré-ménopause, ménopause, longévité.
             </p>
+            <!-- À REMPLACER PLUS TARD PAR TON LIEN MANYCHAT / INSTAGRAM DM -->
             <a class="btn-secondary" href="https://VOTRE-LIEN-COACHING.com" target="_blank">Parler coaching en ligne</a>
         </div>
 
