@@ -3,108 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPOWERFIT — Pré-ouverture officielle</title>
+    <title>EMPOWERFIT — Hub officiel</title>
 
     <style>
+        :root {
+            --prune: #5F123F;
+            --beige: #F5F0DA;
+            --noir: #190B14;
+            --rose: #FF4F79;
+        }
+
+        * { box-sizing: border-box; }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #F5F0DA;
-            color: #190B14;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--beige);
+            color: var(--noir);
         }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+
         header {
-            background-color: #5F123F;
-            color: white;
             text-align: center;
-            padding: 25px 10px;
+            padding: 20px 10px 10px;
         }
+
         .logo {
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-        .section {
-            padding: 35px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #5F123F;
-            font-weight: 700;
-            text-align: center;
-        }
-        .hero-img {
-            width: 100%;
-            max-height: 420px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .btn {
+            max-width: 110px;
+            margin: 0 auto 8px;
             display: block;
-            width: 80%;
-            max-width: 320px;
-            margin: 30px auto;
-            padding: 15px;
-            background-color: #851045;
-            color: white;
+        }
+
+        h1 {
+            margin: 4px 0 6px;
+            font-size: 1.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--prune);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .hero {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+            margin-bottom: 18px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .btn-main {
+            display: block;
+            max-width: 360px;
+            margin: 0 auto 6px;
+            padding: 14px 18px;
+            background: var(--prune);
+            color: var(--beige);
             text-align: center;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
+            border-radius: 999px;
+            font-size: 1rem;
         }
-        footer {
+
+        .btn-main:hover {
+            background: #851045;
+        }
+
+        .cta-caption {
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #6C464E;
+            font-size: 0.85rem;
+            margin-bottom: 26px;
+            opacity: 0.9;
         }
-        .credits {
-            margin-top: 12px;
+
+        h2.section-title {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--prune);
+            margin: 18px 0 14px;
+        }
+
+        .cards {
+            display: grid;
+            gap: 14px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px 16px 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+            color: var(--prune);
+        }
+
+        .card p {
+            margin: 0 0 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(95,18,63,0.08);
+            color: var(--prune);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 4px;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(25,11,20,0.16);
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: var(--noir);
+            margin-right: 6px;
+            margin-top: 4px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--prune);
+            color: var(--prune);
+        }
+
+        .section-light {
+            margin-top: 22px;
+            padding: 18px 16px 20px;
+            background: rgba(95,18,63,0.04);
+            border-radius: 18px;
+        }
+
+        .section-light h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            color: var(--prune);
+        }
+
+        .section-light ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 0.95rem;
+        }
+
+        .section-light li {
+            margin-bottom: 6px;
+        }
+
+        .contact {
+            margin-top: 26px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .contact a {
+            color: var(--prune);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.75;
+        }
+
+        @media (min-width: 720px) {
+            .page { padding: 28px 10px 44px; }
+
+            .hero img {
+                height: 320px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .card {
+                height: 100%;
+            }
+
+            .section-light {
+                display: grid;
+                grid-template-columns: 1.1fr 1fr;
+                column-gap: 18px;
+                align-items: start;
+            }
         }
     </style>
 </head>
 
 <body>
+<div class="page">
 
-<header>
-    <img src="logo-simple-prune.png.png" alt="EMPOWERFIT Logo" class="logo">
-    <h1>EMPOWERFIT — Studio premium pour femmes 30+</h1>
-</header>
+    <header>
+        <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
+        <h1>EMPOWERFIT STUDIO</h1>
+        <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
+        <div class="tagline">Méthode claire. Résultats concrets. Yoga · Pilates · Musculation.</div>
 
-<section class="section">
-    <img src="accueil-empowerfit.jpg.png" alt="Studio Empowerfit" class="hero-img">
+        <div class="hero">
+            <img src="accueil-empowerfit.jpg.png" alt="Accueil EMPOWERFIT">
+        </div>
 
-    <h2>Pourquoi EMPOWERFIT existe</h2>
-    <p>
-        Je suis Samia Ouzine, fondatrice d’EMPOWERFIT.  
-        Après 15 ans de coaching, j’ai vu toutes les limites des salles classiques :
-    </p>
-    <ul>
-        <li>Trop de monde, aucune personnalisation.</li>
-        <li>Pas d’adaptation au cycle, à l’âge, ou aux phases de vie.</li>
-        <li>Des promesses non tenues après l’inscription.</li>
-        <li>Des studios trop spécialisés, inefficaces pour construire du muscle.</li>
-    </ul>
+        <!-- A_MODIFIER : lien vers votre formulaire de pré-inscription / prise de rendez-vous -->
+        <a class="btn-main" href="https://VOTRE-LIEN-PREINSCRIPTION.com" target="_blank">
+            Réserver mon bilan & offre fondatrice
+        </a>
+        <div class="cta-caption">
+            Bilan complet + programme personnalisé · Offre unique pré-ouverture · Tarif préférentiel à vie.
+        </div>
+    </header>
 
-    <p>
-        J’ai créé EMPOWERFIT parce que chaque femme mérite une méthode claire, efficace, 
-        et adaptée à sa biologie.  
-        Une méthode qui construit du muscle, renforce le mental, et accompagne toutes les étapes 
-        de la vie : post-partum, 30+, pré-ménopause, ménopause.
-    </p>
+    <h2 class="section-title">Votre espace central EMPOWERFIT</h2>
 
-    <a href="#" class="btn">Réservez votre place</a>
-</section>
+    <div class="cards">
+        <!-- Carte 1 : Le studio -->
+        <div class="card">
+            <div class="badge">Le studio</div>
+            <h3>Découvrir EMPOWERFIT STUDIO</h3>
+            <p>
+                Un studio premium pensé pour les femmes de 30 ans et plus : planning épuré, peu de cours mais
+                extrêmement efficaces, ambiance cocooning, matériel choisi pour construire du muscle sans se blesser.
+            </p>
+            <!-- A_MODIFIER : lien vers la page “Notre studio” de votre site actuel -->
+            <a class="btn-secondary" href="https://VOTRE-LIEN-STUDIO.com" target="_blank">Voir le studio</a>
+        </div>
 
-<footer>
-    EMPOWERFIT STUDIO — Aix-en-Provence  
-    <div class="credits">Contact : contact.empowerfit.aix@gmail.com</div>
-</footer>
+        <!-- Carte 2 : Pré-ouverture -->
+        <div class="card">
+            <div class="badge">Pré-ouverture</div>
+            <h3>Offre fondatrice limitée</h3>
+            <p>
+                150 femmes seulement bénéficieront d’un tarif privilégié à vie, avec bilan régulier,
+                suivi personnalisé et priorité sur les créneaux les plus demandés.
+            </p>
+            <!-- A_MODIFIER : même lien que le bouton principal ou page dédiée pré-ventes -->
+            <a class="btn-secondary" href="https://VOTRE-LIEN-PREINSCRIPTION.com" target="_blank">Je réserve ma place</a>
+        </div>
 
+        <!-- Carte 3 : Coaching en ligne -->
+        <div class="card">
+            <div class="badge">Coaching en ligne</div>
+            <h3>Coaching EMPOWERFIT à distance</h3>
+            <p>
+                Programmes sur-mesure pour femmes actives, avec focus prise de muscle, santé hormonale,
+                périnée et longévité. Adapté aux cycles de vie : post-partum, pré-ménopause, ménopause.
+            </p>
+            <!-- A_MODIFIER : lien WhatsApp, Instagram DM, ou page coaching en ligne -->
+            <a class="btn-secondary" href="https://VOTRE-LIEN-COACHING.com" target="_blank">Parler coaching en ligne</a>
+        </div>
+    </div>
+
+    <div class="section-light">
+        <div>
+            <h3>Planning & abonnements</h3>
+            <p>
+                Peu de cours, mais les bons : Power Yoga, Power Pilates, PowerFit.  
+                Un planning lisible, pensé pour votre cerveau chargé et votre agenda d’adulte.
+            </p>
+            <ul>
+                <li>3 cours signatures créés avec 15 ans d’expérience terrain.</li>
+                <li>Musculation accessible, sans impact inutile, orientée résultats.</li>
+                <li>Adaptation selon votre âge, votre énergie et votre période de vie.</li>
+            </ul>
+        </div>
+        <div>
+            <!-- A_MODIFIER : lien vers votre planning (PDF, page web, Notion…) -->
+            <a class="btn-secondary" href="https://VOTRE-LIEN-PLANNING.com" target="_blank">Voir le planning</a>
+            <!-- A_MODIFIER : lien vers votre page tarifs / abonnements -->
+            <a class="btn-secondary" href="https://VOTRE-LIEN-TARIFS.com" target="_blank">Voir les abonnements</a>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p><strong>Contact & Pré-inscriptions</strong></p>
+        <p>
+            Email : <a href="mailto:contact.empowerfit.aix@gmail.com">contact.empowerfit.aix@gmail.com</a><br>
+            Instagram : <a href="https://www.instagram.com/fiterus.revolution" target="_blank">@fiterus.revolution</a>
+        </p>
+    </div>
+
+    <footer>
+        EMPOWERFIT STUDIO · Femmes 30+ · Fitérus Révolution
+    </footer>
+
+</div>
 </body>
 </html>
+
+
 
 
 
