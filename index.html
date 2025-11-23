@@ -159,22 +159,6 @@
             color: var(--prune);
         }
 
-        .contact {
-            margin-top: 26px;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        .contact a {
-            color: var(--prune);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
         footer {
             margin-top: 18px;
             text-align: center;
@@ -183,14 +167,12 @@
         }
 
         @media (min-width: 720px) {
-            .page { padding: 28px 10px 44px; }
-            .hero img { height: 320px; }
             .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
             .card { height: 100%; }
         }
     </style>
 
-    <!-- Google Analytics EMPOWERFIT -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7H5Y96B6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -204,7 +186,7 @@
 <div class="page">
 
     <header>
-        <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
+        <img src="logo-simple-prune.png.png" class="logo">
         <h1>EMPOWERFIT STUDIO</h1>
         <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
         <div class="tagline">Méthode claire. Résultats concrets. Yoga · Pilates · Musculation.</div>
@@ -217,7 +199,7 @@
             Accéder aux pré-inscriptions EMPOWERFIT
         </a>
         <div class="cta-caption">
-            10 Fondatrices Premium · 150 offres Pré-ouverture · Tarifs garantis & bonus exclusifs.
+            10 Fondatrices Premium · 150 offres Pré-ouverture · Tarifs garantis · Bonus exclusifs.
         </div>
     </header>
 
@@ -225,16 +207,16 @@
 
     <div class="cards">
 
-        <!-- 1 — PLANNING & ABONNEMENTS -->
+        <!-- 1 — PLANNING -->
         <div class="card">
             <div class="badge">PLANNING & ABONNEMENTS</div>
             <h3>Cours efficaces, pas marketés</h3>
             <p>
-                Power Yoga, Power Pilates, Power Fit : un planning lisible, pensé pour votre agenda d’adulte
-                et votre charge mentale, en lien avec vos objectifs et votre niveau d’énergie.
+                Un planning épuré qui respecte vos cycles, votre énergie et vos objectifs.
+                Power Yoga · Power Pilates · Power Fit.
             </p>
             <a class="btn-secondary" href="planning-empowerfit.png" target="_blank">Voir le planning</a>
-            <a class="btn-secondary" href="offres-empowerfit.png.png" target="_blank">Voir les abonnements</a>
+            <a class="btn-secondary" href="offres-empowerfit.png" target="_blank">Voir les abonnements</a>
         </div>
 
         <!-- 2 — LE STUDIO -->
@@ -242,8 +224,8 @@
             <div class="badge">LE STUDIO</div>
             <h3>Découvrir EMPOWERFIT Studio</h3>
             <p>
-                Un studio premium pensé pour les femmes de 30 ans et plus : trois cours ciblés et extrêmement
-                efficaces, ambiance cocooning, matériel choisi pour construire du muscle en sécurité.
+                Un espace premium dédié aux femmes, pensé pour la progression, la sécurité et la montée en puissance.
+                Ambiance cocooning, matériel haut de gamme et méthode EMPOWERFIT complète.
             </p>
             <a class="btn-secondary" href="https://VOTRE-LIEN-STUDIO.com" target="_blank">
                 Découvrir le studio EMPOWERFIT
@@ -255,23 +237,16 @@
             <div class="badge">PROGRAMMES EN LIGNE</div>
             <h3>Coaching EMPOWERFIT à distance</h3>
             <p>
-                Programmes adaptés aux femmes actives : prise de muscle, santé hormonale, post-partum,
-                pré-ménopause, ménopause, longévité. Coaching premium 1:1 à distance, pour rester régulière
-                même avec un emploi du temps chargé.
+                Programmes premium pour femmes actives : prise de muscle, énergie féminine, longévité,
+                périnée, post-partum, pré-ménopause, ménopause. Coaching adapté et flexible.
             </p>
-            <a class="btn-secondary" href="https://VOTRE-LIEN-COACHING.com" target="_blank">
+
+            <!-- 👉 Bouton mis à jour avec ton Instagram -->
+            <a class="btn-secondary" href="https://www.instagram.com/fiterus.revolution/" target="_blank">
                 Parler coaching en ligne
             </a>
         </div>
 
-    </div>
-
-    <div class="contact">
-        <p><strong>Contact & Pré-inscriptions</strong></p>
-        <p>
-            Email : <a href="mailto:contact.empowerfit.aix@gmail.com">contact.empowerfit.aix@gmail.com</a><br>
-            Instagram : <a href="https://www.instagram.com/fiterus.revolution" target="_blank">@fiterus.revolution</a>
-        </p>
     </div>
 
     <footer>
@@ -280,7 +255,7 @@
 
 </div>
 
-<!-- Suivi des clics sur tous les liens/boutons -->
+<!-- Suivi des clics -->
 <script>
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("click", () => {
