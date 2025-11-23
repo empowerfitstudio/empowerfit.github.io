@@ -1,245 +1,306 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EMPOWERFIT — Pré-inscriptions Fondatrices</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --beige:#F5F0DA;
-      --prune:#5F123F;
-      --doré:#C8A66A;
-      --noir:#190B14;
-      --rose:#FF4F79;
-    }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      padding:0;
-      font-family: Montserrat, system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg,#F8F4E7 0%, var(--beige) 100%);
-      color:var(--noir);
-    }
-    .wrap{
-      max-width:960px;
-      margin:0 auto;
-      padding:28px 16px 40px;
-    }
-    header{
-      text-align:center;
-      margin-bottom:20px;
-    }
-    header img{
-      max-width:100px;
-      margin-bottom:8px;
-    }
-    h1{
-      font-family:Lora, Georgia, serif;
-      font-size:2rem;
-      color:var(--prune);
-      margin:6px 0 4px;
-    }
-    .subtitle{
-      text-transform:uppercase;
-      letter-spacing:0.16em;
-      font-size:0.8rem;
-      opacity:0.8;
-    }
-    .intro{
-      margin-top:10px;
-      font-size:0.95rem;
-      line-height:1.6;
-    }
-    .grid{
-      display:grid;
-      gap:16px;
-      margin-top:24px;
-    }
-    .card{
-      background:#fffaf0;
-      border-radius:16px;
-      border:1px solid #eadfca;
-      padding:20px 18px 22px;
-      box-shadow:0 10px 28px rgba(95,18,63,.08);
-    }
-    .badge{
-      display:inline-block;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:0.72rem;
-      text-transform:uppercase;
-      letter-spacing:0.16em;
-      background:rgba(95,18,63,0.06);
-      color:var(--prune);
-      margin-bottom:6px;
-    }
-    .badge.gold{
-      background:rgba(200,166,106,0.18);
-      color:var(--noir);
-    }
-    .card h2{
-      font-family:Lora, Georgia, serif;
-      font-size:1.4rem;
-      margin:4px 0 6px;
-      color:var(--prune);
-    }
-    .price{
-      font-weight:700;
-      margin-bottom:8px;
-      color:var(--noir);
-    }
-    .price span{
-      color:var(--prune);
-    }
-    ul{
-      margin:8px 0 12px;
-      padding-left:20px;
-      font-size:0.95rem;
-      line-height:1.5;
-    }
-    li{margin-bottom:4px;}
-    .cta{
-      display:inline-block;
-      margin-top:6px;
-      padding:12px 18px;
-      border-radius:999px;
-      background:linear-gradient(90deg,#a0356b,#5F123F);
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.95rem;
-      box-shadow:0 8px 18px rgba(95,18,63,.25);
-    }
-    .cta:hover{transform:translateY(-1px);}
-    .note{
-      font-size:0.85rem;
-      opacity:0.8;
-      margin-top:10px;
-    }
-    .section-title{
-      font-family:Lora,Georgia,serif;
-      font-size:1.2rem;
-      color:var(--prune);
-      margin-top:26px;
-      margin-bottom:8px;
-    }
-    .steps ol{
-      margin:0;
-      padding-left:20px;
-      font-size:0.95rem;
-      line-height:1.6;
-    }
-    .back-link{
-      display:inline-block;
-      margin-top:20px;
-      font-size:0.9rem;
-      text-decoration:none;
-      color:var(--prune);
-    }
-    footer{
-      margin-top:30px;
-      text-align:center;
-      font-size:0.8rem;
-      opacity:0.75;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPOWERFIT — Hub officiel</title>
 
-    @media(min-width:720px){
-      .grid{
-        grid-template-columns:1fr 1fr;
-      }
-    }
-  </style>
+    <style>
+        :root {
+            --prune: #5F123F;
+            --beige: #F5F0DA;
+            --noir: #190B14;
+            --rose: #FF4F79;
+        }
 
-  <!-- Google Analytics EMPOWERFIT -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7H5Y96B6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2D7H5Y96B6');
-  </script>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--beige);
+            color: var(--noir);
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 10px 10px;
+        }
+
+        .logo {
+            max-width: 110px;
+            margin: 0 auto 8px;
+            display: block;
+        }
+
+        h1 {
+            margin: 4px 0 6px;
+            font-size: 1.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--prune);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .hero {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+            margin-bottom: 18px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .btn-main {
+            display: block;
+            max-width: 360px;
+            margin: 0 auto 6px;
+            padding: 14px 18px;
+            background: var(--prune);
+            color: var(--beige);
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 999px;
+            font-size: 1rem;
+        }
+
+        .btn-main:hover {
+            background: #851045;
+        }
+
+        .cta-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            margin-bottom: 26px;
+            opacity: 0.9;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--prune);
+            margin: 18px 0 14px;
+        }
+
+        .cards {
+            display: grid;
+            gap: 14px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px 16px 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+            color: var(--prune);
+        }
+
+        .card p {
+            margin: 0 0 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(95,18,63,0.08);
+            color: var(--prune);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 4px;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(25,11,20,0.16);
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: var(--noir);
+            margin-right: 6px;
+            margin-top: 4px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--prune);
+            color: var(--prune);
+        }
+
+        .contact {
+            margin-top: 26px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .contact a {
+            color: var(--prune);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.75;
+        }
+
+        @media (min-width: 720px) {
+            .page { padding: 28px 10px 44px; }
+            .hero img { height: 320px; }
+            .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .card { height: 100%; }
+        }
+    </style>
+
+    <!-- Google Analytics EMPOWERFIT -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7H5Y96B6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2D7H5Y96B6');
+    </script>
 </head>
+
 <body>
-<div class="wrap">
+<div class="page">
 
-  <header>
-    <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT">
-    <div class="subtitle">Pré-inscriptions officielles</div>
-    <h1>Fondatrices EMPOWERFIT</h1>
-    <p class="intro">
-      Vous êtes au bon endroit pour réserver votre place de <strong>Fondatrice EMPOWERFIT</strong>.  
-      Deux offres sont disponibles : <strong>150 places Fondatrices</strong> et <strong>10 places Annual Pack 1000 €</strong>.
-    </p>
-  </header>
+    <header>
+        <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
+        <h1>EMPOWERFIT STUDIO</h1>
+        <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
+        <div class="tagline">Méthode claire. Résultats concrets. Yoga · Pilates · Musculation.</div>
 
-  <div class="grid">
+        <div class="hero">
+            <img src="accueil-empowerfit.jpg.png" alt="Accueil EMPOWERFIT">
+        </div>
 
-    <!-- OFFRE FONDATRICE 150 PLACES -->
-    <section class="card" id="offre-fondatrice">
-      <div class="badge">150 PLACES</div>
-      <h2>Offre Fondatrice EMPOWERFIT</h2>
-      <p class="price">
-        🔸 <span>60 €</span> le bilan complet (au lieu de 90 €)  
-        <br>🔸 <span>1er mois offert</span> puis <span>100 €/mois à vie</span> (au lieu de 160 €)
-      </p>
-      <ul>
-        <li>Bilan complet 1h30 + programme personnalisé</li>
-        <li>1er mois d’abonnement offert</li>
-        <li>100 €/mois garanti à vie tant que l’abonnement reste actif</li>
-        <li>1h de coaching offerte tous les 3 mois</li>
-        <li>Statut <strong>Fondatrice EMPOWERFIT</strong> + priorité sur les créneaux</li>
-      </ul>
-      <!-- 🔗 À REMPLACER PAR VOTRE LIEN TYPEFORM / STRIPE -->
-      <a class="cta" href="#" target="_blank">
-        Je réserve ma place Fondatrice
-      </a>
-      <p class="note">
-        Si le projet n’aboutit pas, les 60 € sont remboursés ou convertis en 1h de coaching dans le studio actuel.
-      </p>
-    </section>
+        <!-- Bouton principal vers la page de pré-inscriptions -->
+        <a class="btn-main" href="preinscriptions.html">
+            Réserver mon bilan & mon offre fondatrice
+        </a>
+        <div class="cta-caption">
+            150 places Fondatrices · 10 places Annual Pack · Offre unique pré-ouverture · Tarif préférentiel à vie.
+        </div>
+    </header>
 
-    <!-- ANNUAL PACK 1000€ (10 PLACES) -->
-    <section class="card" id="annual-pack">
-      <div class="badge gold">10 PLACES PREMIUM</div>
-      <h2>Annual Pack 1000 €</h2>
-      <p class="price">
-        💎 <span>1000 €</span> la première année  
-        <br>pour un accès premium réservé à 10 femmes seulement.
-      </p>
-      <ul>
-        <li>Accès au studio EMPOWERFIT pendant 12 mois</li>
-        <li>1h de coaching individuelle offerte chaque mois</li>
-        <li>Statut <strong>Fondatrice Premium</strong> (VIP)</li>
-        <li>Avantages exclusifs lors des événements EMPOWERFIT</li>
-        <li>Priorité absolue sur les créneaux les plus demandés</li>
-      </ul>
-      <!-- 🔗 À REMPLACER PAR VOTRE LIEN TYPEFORM / STRIPE PREMIUM -->
-      <a class="cta" href="#" target="_blank">
-        Je demande une place Annual Pack
-      </a>
-      <p class="note">
-        Offre distincte des 150 places Fondatrices. Ultra limitée à 10 femmes engagées sur l’année.
-      </p>
-    </section>
+    <h2 class="section-title">Votre espace central EMPOWERFIT</h2>
 
-  </div>
+    <div class="cards">
 
-  <section class="steps">
-    <h2 class="section-title">Comment se passe la suite ?</h2>
-    <ol>
-      <li>Vous validez votre pré-inscription via le formulaire sécurisé.</li>
-      <li>Vous recevez un mail de confirmation avec les prochaines étapes.</li>
-      <li>À l’ouverture : bilan complet + séance de coaching selon l’offre choisie.</li>
-      <li>Votre tarif Fondatrice ou Annual Pack est alors activé et garanti.</li>
-    </ol>
-  </section>
+        <!-- 1 — PRÉ-OUVERTURE -->
+        <div class="card">
+            <div class="badge">PRÉ-OUVERTURE</div>
+            <h3>Offre Fondatrice (150 places)</h3>
+            <p>
+                Devenez l'une des 150 Fondatrices EMPOWERFIT : bilan complet à 60 €, 
+                premier mois offert puis <strong>100 €/mois à vie</strong> au lieu de 160 €, 
+                avec 1h de coaching offerte tous les 3 mois.
+            </p>
+            <a class="btn-secondary" href="preinscriptions.html#offre-fondatrice">Détails & pré-inscription</a>
+        </div>
 
-  <a href="index.html" class="back-link">← Retour au hub EMPOWERFIT</a>
+        <!-- 2 — ANNUAL PACK 1000€ -->
+        <div class="card">
+            <div class="badge">EXCLUSIF</div>
+            <h3>Annual Pack 1000 € (10 places)</h3>
+            <p>
+                10 places premium uniquement : 1000 € pour la première année, 
+                1h de coaching offerte chaque mois, statut Fondatrice Premium et avantages exclusifs.
+            </p>
+            <a class="btn-secondary" href="preinscriptions.html#annual-pack">Voir l'offre Annual Pack</a>
+        </div>
 
-  <footer>
-    EMPOWERFIT STUDIO · WP FIT UNLIMITED · 5 rue de la Fontaine · 13100 Aix-en-Provence
-  </footer>
+        <!-- 3 — PLANNING & ABONNEMENTS -->
+        <div class="card">
+            <div class="badge">Planning & Abonnements</div>
+            <h3>Cours efficaces, pas marketés</h3>
+            <p>
+                Power Yoga, Power Pilates, Power Fit : un planning lisible, pensé pour votre agenda 
+                d’adulte et votre charge mentale, en lien avec vos objectifs et votre énergie.
+            </p>
+            <a class="btn-secondary" href="planning-empowerfit.pdf" target="_blank">Voir le planning</a>
+            <a class="btn-secondary" href="abonnements-empowerfit.pdf" target="_blank">Voir les abonnements</a>
+        </div>
+
+        <!-- 4 — LE STUDIO -->
+        <div class="card">
+            <div class="badge">Le studio</div>
+            <h3>Découvrir EMPOWERFIT Studio</h3>
+            <p>
+                Un studio premium pensé pour les femmes de 30 ans et plus : trois cours ciblés 
+                et extrêmement efficaces, ambiance cocooning, matériel choisi pour construire 
+                du muscle en sécurité.
+            </p>
+            <a class="btn-secondary" href="https://empowerfitstudio.github.io/fondatrices.html" target="_blank">
+                Voir la vision & les Fondatrices
+            </a>
+        </div>
+
+        <!-- 5 — PROGRAMMES EN LIGNE -->
+        <div class="card">
+            <div class="badge">Programmes en ligne</div>
+            <h3>Coaching EMPOWERFIT à distance</h3>
+            <p>
+                Programmes adaptés aux femmes actives : prise de muscle, santé hormonale, 
+                post-partum, pré-ménopause, ménopause, longévité. Coaching 1:1 premium à distance.
+            </p>
+            <a class="btn-secondary" href="https://www.instagram.com/fiterus.revolution" target="_blank">
+                Parler coaching en ligne
+            </a>
+        </div>
+
+    </div>
+
+    <div class="contact">
+        <p><strong>Contact & Pré-inscriptions</strong></p>
+        <p>
+            Email : <a href="mailto:contact.empowerfit.aix@gmail.com">contact.empowerfit.aix@gmail.com</a><br>
+            Instagram : <a href="https://www.instagram.com/fiterus.revolution" target="_blank">@fiterus.revolution</a>
+        </p>
+    </div>
+
+    <footer>
+        EMPOWERFIT STUDIO · Femmes 30+ · Fitérus Révolution
+    </footer>
 
 </div>
 
