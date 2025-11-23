@@ -118,6 +118,18 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
         }
 
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(95,18,63,0.08);
+            color: var(--prune);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 6px;
+        }
+
         .card h3 {
             margin: 0 0 6px;
             font-size: 1.05rem;
@@ -201,44 +213,54 @@
             <img src="accueil-empowerfit.jpg.png" alt="Accueil EMPOWERFIT">
         </div>
 
-        <!-- Bouton principal vers la page de pré-inscriptions -->
         <a class="btn-main" href="preinscriptions.html">
-            Découvrir les offres Fondatrices & Pré-ouverture
+            Accéder aux pré-inscriptions EMPOWERFIT
         </a>
         <div class="cta-caption">
             10 Fondatrices Premium · 150 offres Pré-ouverture · Tarifs garantis & bonus exclusifs.
         </div>
     </header>
 
-    <h2 class="section-title">Vos liens importants</h2>
+    <h2 class="section-title">Votre espace central EMPOWERFIT</h2>
 
     <div class="cards">
 
-        <!-- PLANNING -->
+        <!-- 1 — PLANNING & ABONNEMENTS -->
         <div class="card">
-            <h3>Planning des cours</h3>
-            <p>Planning lisible : Power Yoga, Power Pilates, Power Fit.</p>
-            <a class="btn-secondary" href="planning-empowerfit.png" target="_blank">
-                Voir le planning
+            <div class="badge">PLANNING & ABONNEMENTS</div>
+            <h3>Cours efficaces, pas marketés</h3>
+            <p>
+                Power Yoga, Power Pilates, Power Fit : un planning lisible, pensé pour votre agenda d’adulte
+                et votre charge mentale, en lien avec vos objectifs et votre niveau d’énergie.
+            </p>
+            <a class="btn-secondary" href="planning-empowerfit.png" target="_blank">Voir le planning</a>
+            <a class="btn-secondary" href="offres-empowerfit.png.png" target="_blank">Voir les abonnements</a>
+        </div>
+
+        <!-- 2 — LE STUDIO -->
+        <div class="card">
+            <div class="badge">LE STUDIO</div>
+            <h3>Découvrir EMPOWERFIT Studio</h3>
+            <p>
+                Un studio premium pensé pour les femmes de 30 ans et plus : trois cours ciblés et extrêmement
+                efficaces, ambiance cocooning, matériel choisi pour construire du muscle en sécurité.
+            </p>
+            <a class="btn-secondary" href="https://VOTRE-LIEN-STUDIO.com" target="_blank">
+                Découvrir le studio EMPOWERFIT
             </a>
         </div>
 
-        <!-- ABONNEMENTS -->
+        <!-- 3 — PROGRAMMES EN LIGNE -->
         <div class="card">
-            <h3>Abonnements</h3>
-            <p>Serenity · Balance · Infinity · Cartes de séances.</p>
-            <!-- on réutilise le fichier des offres pour les abonnements -->
-            <a class="btn-secondary" href="offres-empowerfit.png.png" target="_blank">
-                Voir les abonnements
-            </a>
-        </div>
-
-        <!-- TARIFS / OFFRES -->
-        <div class="card">
-            <h3>Tarifs & Offres</h3>
-            <p>Les prix détaillés et les options selon vos besoins.</p>
-            <a class="btn-secondary" href="offres-empowerfit.png.png" target="_blank">
-                Voir les offres
+            <div class="badge">PROGRAMMES EN LIGNE</div>
+            <h3>Coaching EMPOWERFIT à distance</h3>
+            <p>
+                Programmes adaptés aux femmes actives : prise de muscle, santé hormonale, post-partum,
+                pré-ménopause, ménopause, longévité. Coaching premium 1:1 à distance, pour rester régulière
+                même avec un emploi du temps chargé.
+            </p>
+            <a class="btn-secondary" href="https://VOTRE-LIEN-COACHING.com" target="_blank">
+                Parler coaching en ligne
             </a>
         </div>
 
@@ -258,14 +280,14 @@
 
 </div>
 
-<!-- Suivi des clics sur liens et boutons -->
+<!-- Suivi des clics sur tous les liens/boutons -->
 <script>
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("click", () => {
       if (typeof gtag === 'function') {
         gtag('event', 'click', {
-          'event_category': 'Bouton',
-          'event_label': el.textContent.trim()
+          event_category: 'Bouton',
+          event_label: el.textContent.trim()
         });
       }
     });
