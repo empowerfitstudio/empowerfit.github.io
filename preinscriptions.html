@@ -31,7 +31,7 @@
       margin-bottom:20px;
     }
     header img{
-      max-width:100px;
+      max-width:90px;
       margin-bottom:8px;
     }
     h1{
@@ -86,11 +86,16 @@
     }
     .price{
       font-weight:700;
-      margin-bottom:8px;
+      margin-bottom:6px;
       color:var(--noir);
     }
     .price span{
       color:var(--prune);
+    }
+    .counter{
+      font-size:0.9rem;
+      margin-bottom:8px;
+      opacity:0.85;
     }
     ul{
       margin:8px 0 12px;
@@ -143,6 +148,28 @@
       font-size:0.8rem;
       opacity:0.75;
     }
+    .docs{
+      margin-top:26px;
+      padding:18px 16px;
+      border-radius:16px;
+      background:#fff;
+      border:1px solid #eadfca;
+      box-shadow:0 8px 20px rgba(95,18,63,.05);
+    }
+    .docs h2{
+      font-family:Lora,Georgia,serif;
+      font-size:1.2rem;
+      color:var(--prune);
+      margin:0 0 8px;
+    }
+    .docs p{
+      font-size:0.9rem;
+      margin:0 0 10px;
+    }
+    .docs .cta{
+      margin-right:8px;
+      margin-bottom:6px;
+    }
 
     @media(min-width:720px){
       .grid{
@@ -151,7 +178,7 @@
     }
   </style>
 
-  <!-- Google Analytics EMPOWERFIT -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7H5Y96B6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -170,108 +197,140 @@
     <p class="intro">
       Deux niveaux d’engagement pour soutenir l’ouverture du studio EMPOWERFIT à Aix-en-Provence :
       <strong>10 Fondatrices Premium</strong> et <strong>150 offres Pré-ouverture</strong>,
-      avec des tarifs garantis et des bonus exclusifs.
+      avec des tarifs garantis, des avantages exclusifs et des bonus en ligne.
     </p>
   </header>
 
+  <!-- CARTES RÉSUMÉ OFFRES -->
   <div class="grid">
 
-    <!-- OFFRE PREMIUM 10 FONDATRICES (COURTE) -->
-    <section class="card" id="offre-premium">
-      <div class="badge gold">10 FONDATRICES PREMIUM</div>
-      <h2>Offre Premium — 10 Fondatrices</h2>
+    <!-- OFFRE PRÉ-OUVERTURE 150 PLACES -->
+    <section class="card" id="offre-preouverture">
+      <div class="badge">PRÉ-OUVERTURE</div>
+      <h2>Offre Fondatrice (150 places)</h2>
       <p class="price">
-        💎 <span>1000 €</span> la 1ère année  
-        <br>puis <span>100 € / mois à vie</span> (au lieu de 190 €)
+        Devenez l’une des 150 Fondatrices EMPOWERFIT : bilan complet à <span>60 €</span>,
+        premier mois offert puis abonnement à tarif réduit.
+      </p>
+      <p class="counter">
+        Places restantes : <strong>150</strong> / 150
       </p>
       <ul>
-        <li>Avantages abonnement Infinity</li>
-        <li>Bilan d’ouverture offert</li>
-        <li>Coaching + accès prioritaire</li>
+        <li>Serenity 100 €/mois (au lieu de 130 €)</li>
+        <li>Balance 130 €/mois (au lieu de 160 €)</li>
+        <li>Infinity 160 €/mois (au lieu de 190 €)</li>
+        <li>1er mois offert, 1er prélèvement le 5 du mois suivant l’ouverture</li>
       </ul>
-      <a class="cta" href="#details-premium">
-        Voir les détails & pré-inscription
-      </a>
+      <a class="cta" href="#details-preouverture">Détails & pré-inscription</a>
     </section>
 
-    <!-- OFFRE PRE-OUVERTURE 150 PLACES (COURTE) -->
-    <section class="card" id="offre-preouverture">
-      <div class="badge">150 PLACES PRÉ-OUVERTURE</div>
-      <h2>Offre Pré-ouverture — 150 places</h2>
+    <!-- OFFRE PREMIUM 10 FONDATRICES -->
+    <section class="card" id="offre-premium">
+      <div class="badge gold">EXCLUSIF</div>
+      <h2>Annual Pack 1000 € (10 places)</h2>
       <p class="price">
-        🎟️ Tarifs réduits sur Serenity, Balance & Infinity
+        10 places Premium uniquement : <span>1000 €</span> pour la première année,
+        puis <span>100 €/mois à vie</span> (au lieu de 190 €).
+      </p>
+      <p class="counter">
+        Places restantes : <strong>10</strong> / 10
       </p>
       <ul>
-        <li>Bilan à 60 € (au lieu de 90 €)</li>
-        <li>1er mois offert</li>
-        <li>Prélèvement à partir du 5 du mois suivant l’ouverture</li>
+        <li>Accès et avantages de l’abonnement Infinity dès l’ouverture</li>
+        <li>Bilan d’ouverture à 90 € offert + 1h de coaching individuel offerte</li>
+        <li>Tarif Infinity bloqué à 100 €/mois à vie tant que l’abonnement reste actif</li>
+        <li>Bonus exclusifs et statut Fondatrice Premium</li>
       </ul>
-      <a class="cta" href="#details-preouverture">
-        Voir les détails & pré-inscription
-      </a>
+      <a class="cta" href="#details-premium">Détails & pré-inscription</a>
     </section>
 
   </div>
 
-  <!-- DÉTAILS OFFRE PREMIUM -->
-  <section class="steps" id="details-premium">
-    <h2 class="section-title">Détails — Offre Premium 10 Fondatrices</h2>
-    <ol>
-      <li>
-        💎 <strong>1000 € la première année</strong>, avec accès et avantages de l’abonnement <strong>Infinity</strong>.
-      </li>
-      <li>
-        Ensuite, <strong>100 € / mois à vie</strong> <span>(au lieu de 190 €)</span>, tant que l’abonnement reste actif.
-      </li>
-      <li>
-        <strong>Bilan d’ouverture à 90 € offert</strong> (bilan complet à l’ouverture du studio).
-      </li>
-      <li>
-        <strong>1h de coaching individuel à 70 € offerte</strong>.
-      </li>
-      <li>
-        <strong>Accès prioritaire</strong> sur les créneaux les plus demandés, bonus exclusifs et statut
-        <strong>Fondatrice Premium</strong>.
-      </li>
-      <li>
-        Pour cette offre comme pour les 150 : <strong>Calendrier de l’avent / bonus en ligne offert</strong>.
-      </li>
-    </ol>
-    <!-- 🔗 À REMPLACER PAR VOTRE LIEN TYPEFORM / STRIPE PREMIUM -->
-    <a class="cta" href="#" target="_blank">
-      Je demande une place Fondatrice Premium
-    </a>
-  </section>
-
   <!-- DÉTAILS OFFRE PRÉ-OUVERTURE -->
   <section class="steps" id="details-preouverture">
-    <h2 class="section-title">Détails — Offre Pré-ouverture 150 places</h2>
+    <h2 class="section-title">Détails — Offre Fondatrice (150 places)</h2>
     <ol>
       <li>
-        Vous choisissez votre formule parmi :
+        Vous réservez votre place en réglant un <strong>bilan complet à 60 €</strong> (au lieu de 90 €).
+        Ce bilan est réalisé à l’ouverture du studio, avec programme personnalisé.
+      </li>
+      <li>
+        Votre <strong>premier mois d’abonnement est offert</strong>.
+      </li>
+      <li>
+        Vous choisissez ensuite votre formule :
         <ul>
-          <li><strong>Serenity</strong> : 100 €/mois <span>(au lieu de 130 €)</span></li>
-          <li><strong>Balance</strong> : 130 €/mois <span>(au lieu de 160 €)</span></li>
-          <li><strong>Infinity</strong> : 160 €/mois <span>(au lieu de 190 €)</span></li>
+          <li><strong>Serenity</strong> : 100 €/mois (au lieu de 130 €)</li>
+          <li><strong>Balance</strong> : 130 €/mois (au lieu de 160 €)</li>
+          <li><strong>Infinity</strong> : 160 €/mois (au lieu de 190 €)</li>
         </ul>
       </li>
       <li>
-        Vous réglez un <strong>bilan à 60 €</strong> (au lieu de 90 €) avant l’ouverture pour réserver votre place.
+        Le <strong>premier prélèvement</strong> a lieu le <strong>5 du mois suivant l’ouverture</strong>.
       </li>
       <li>
-        Votre <strong>1er mois est offert</strong>.
-      </li>
-      <li>
-        Le <strong>premier prélèvement a lieu le 5 du mois suivant l’ouverture</strong> du studio.
-      </li>
-      <li>
-        Pour cette offre comme pour les 10 Fondatrices Premium : <strong>Calendrier de l’avent / bonus en ligne offert</strong>.
+        Pour toutes les Fondatrices : accès au <strong>calendrier de l’avent / bonus en ligne EMPOWERFIT</strong>.
       </li>
     </ol>
-    <!-- 🔗 À REMPLACER PAR VOTRE LIEN TYPEFORM / STRIPE PRÉ-OUVERTURE -->
-    <a class="cta" href="#" target="_blank">
-      Je réserve mon offre Pré-ouverture
+    <!-- 👉 Remplacer ce lien par ton lien de paiement "bilan 60 €" (Stripe / PayPal) -->
+    <a class="cta" href="https://votre-lien-paiement-60.com" target="_blank">
+      Réserver ma place Fondatrice (bilan 60 €)
     </a>
+    <p class="note">
+      Votre place est confirmée après validation du paiement du bilan à 60 €. En cas de non-ouverture,
+      le montant est remboursé ou transformé en séance/coaching dans le studio actuel.
+    </p>
+  </section>
+
+  <!-- DÉTAILS OFFRE PREMIUM -->
+  <section class="steps" id="details-premium">
+    <h2 class="section-title">Détails — Annual Pack 1000 € (10 places)</h2>
+    <ol>
+      <li>
+        Vous réglez un <strong>pack annuel à 1000 €</strong> pour la première année, incluant les avantages
+        de l’abonnement <strong>Infinity</strong> dès l’ouverture.
+      </li>
+      <li>
+        À partir de la deuxième année, vous bénéficiez d’un <strong>tarif Infinity bloqué à 100 €/mois à vie</strong>
+        (au lieu de 190 €), tant que votre abonnement reste actif.
+      </li>
+      <li>
+        Votre <strong>bilan d’ouverture à 90 € est offert</strong> + <strong>1h de coaching individuel à 70 € offerte</strong>.
+      </li>
+      <li>
+        Vous faites partie du cercle très restreint des <strong>Fondatrices Premium</strong> : accès prioritaire aux créneaux,
+        bonus exclusifs, invitations privilégiées aux événements EMPOWERFIT.
+      </li>
+      <li>
+        Accès également au <strong>calendrier de l’avent / bonus en ligne EMPOWERFIT</strong>.
+      </li>
+    </ol>
+    <!-- 👉 Remplacer ce lien par ton lien de paiement "annual pack 1000 €" -->
+    <a class="cta" href="https://votre-lien-paiement-1000.com" target="_blank">
+      Réserver mon Annual Pack 1000 €
+    </a>
+    <p class="note">
+      Offre limitée à 10 femmes. Votre place est confirmée dès validation du paiement. En cas de non-ouverture,
+      les modalités de report ou de remboursement seront précisées par mail.
+    </p>
+  </section>
+
+  <!-- DOCUMENTS À TÉLÉCHARGER -->
+  <section class="docs" id="documents">
+    <h2>Documents Fondatrices à télécharger</h2>
+    <p>
+      Une fois votre pré-inscription validée, vous pouvez télécharger vos documents officiels EMPOWERFIT :
+    </p>
+    <!-- 👉 Uploade les PDF avec ces noms dans GitHub ou adapte les href -->
+    <a class="cta" href="contrat-fondatrice-empowerfit.pdf" target="_blank">
+      📄 Contrat Fondatrice (PDF)
+    </a>
+    <a class="cta" href="certificat-fondatrice-empowerfit.pdf" target="_blank">
+      🏆 Certificat Fondatrice (PDF)
+    </a>
+    <p class="note">
+      Pensez à conserver ces documents précieusement : ils attestent de votre statut de Fondatrice EMPOWERFIT.
+    </p>
   </section>
 
   <a href="index.html" class="back-link">← Retour au hub EMPOWERFIT</a>
@@ -282,14 +341,14 @@
 
 </div>
 
-<!-- Suivi des clics sur liens et boutons -->
+<!-- Suivi des clics sur tous les liens/boutons -->
 <script>
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("click", () => {
       if (typeof gtag === 'function') {
         gtag('event', 'click', {
-          'event_category': 'Bouton',
-          'event_label': el.textContent.trim()
+          event_category: 'Bouton',
+          event_label: el.textContent.trim()
         });
       }
     });
