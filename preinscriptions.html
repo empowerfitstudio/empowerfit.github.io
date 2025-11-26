@@ -1,364 +1,411 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EMPOWERFIT — Pré-inscriptions Fondatrices</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --beige:#F5F0DA;
-      --prune:#5F123F;
-      --doré:#C8A66A;
-      --noir:#190B14;
-      --rose:#FF4F79;
-    }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      padding:0;
-      font-family: Montserrat, system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg,#F8F4E7 0%, var(--beige) 100%);
-      color:var(--noir);
-    }
-    .wrap{
-      max-width:960px;
-      margin:0 auto;
-      padding:28px 16px 40px;
-    }
-    header{
-      text-align:center;
-      margin-bottom:20px;
-    }
-    header img{
-      max-width:90px;
-      margin-bottom:8px;
-    }
-    h1{
-      font-family:Lora, Georgia, serif;
-      font-size:2rem;
-      color:var(--prune);
-      margin:6px 0 4px;
-    }
-    .subtitle{
-      text-transform:uppercase;
-      letter-spacing:0.16em;
-      font-size:0.8rem;
-      opacity:0.8;
-    }
-    .intro{
-      margin-top:10px;
-      font-size:0.95rem;
-      line-height:1.6;
-    }
-    .grid{
-      display:grid;
-      gap:16px;
-      margin-top:24px;
-    }
-    .card{
-      background:#fffaf0;
-      border-radius:16px;
-      border:1px solid #eadfca;
-      padding:20px 18px 22px;
-      box-shadow:0 10px 28px rgba(95,18,63,.08);
-    }
-    .badge{
-      display:inline-block;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:0.72rem;
-      text-transform:uppercase;
-      letter-spacing:0.16em;
-      background:rgba(95,18,63,0.06);
-      color:var(--prune);
-      margin-bottom:6px;
-    }
-    .badge.gold{
-      background:rgba(200,166,106,0.18);
-      color:var(--noir);
-    }
-    .card h2{
-      font-family:Lora, Georgia, serif;
-      font-size:1.4rem;
-      margin:4px 0 6px;
-      color:var(--prune);
-    }
-    .price{
-      font-weight:700;
-      margin-bottom:6px;
-      color:var(--noir);
-    }
-    .price span{
-      color:var(--prune);
-    }
-    .counter{
-      font-size:0.9rem;
-      margin-bottom:8px;
-      opacity:0.85;
-    }
-    ul{
-      margin:8px 0 12px;
-      padding-left:20px;
-      font-size:0.95rem;
-      line-height:1.5;
-    }
-    li{margin-bottom:4px;}
-    .cta{
-      display:inline-block;
-      margin-top:6px;
-      padding:12px 18px;
-      border-radius:999px;
-      background:linear-gradient(90deg,#a0356b,#5F123F);
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.95rem;
-      box-shadow:0 8px 18px rgba(95,18,63,.25);
-    }
-    .cta:hover{transform:translateY(-1px);}
-    .note{
-      font-size:0.85rem;
-      opacity:0.8;
-      margin-top:10px;
-    }
-    .section-title{
-      font-family:Lora,Georgia,serif;
-      font-size:1.2rem;
-      color:var(--prune);
-      margin-top:26px;
-      margin-bottom:8px;
-    }
-    .steps ol{
-      margin:0;
-      padding-left:20px;
-      font-size:0.95rem;
-      line-height:1.6;
-    }
-    .back-link{
-      display:inline-block;
-      margin-top:20px;
-      font-size:0.9rem;
-      text-decoration:none;
-      color:var(--prune);
-    }
-    footer{
-      margin-top:30px;
-      text-align:center;
-      font-size:0.8rem;
-      opacity:0.75;
-    }
-    .docs{
-      margin-top:26px;
-      padding:18px 16px;
-      border-radius:16px;
-      background:#fff;
-      border:1px solid #eadfca;
-      box-shadow:0 8px 20px rgba(95,18,63,.05);
-    }
-    .docs h2{
-      font-family:Lora,Georgia,serif;
-      font-size:1.2rem;
-      color:var(--prune);
-      margin:0 0 8px;
-    }
-    .docs p{
-      font-size:0.9rem;
-      margin:0 0 10px;
-    }
-    .docs .cta{
-      margin-right:8px;
-      margin-bottom:6px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pré-inscriptions fondatrices – EMPOWERFIT</title>
 
-    @media(min-width:720px){
-      .grid{
-        grid-template-columns:1fr 1fr;
-      }
-    }
-  </style>
+<style>
+:root {
+--prune: #5F123F;
+--beige: #F5F0DA;
+--noir: #190B14;
+--rose: #FF4F79;
+}
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7H5Y96B6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2D7H5Y96B6');
-  </script>
+* { box-sizing: border-box; }
+
+body {
+margin: 0;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+background-color: var(--beige);
+color: var(--noir);
+}
+
+.page {
+max-width: 960px;
+margin: 0 auto;
+padding: 24px 16px 40px;
+}
+
+header {
+text-align: center;
+padding: 12px 10px 18px;
+}
+
+.logo {
+max-width: 110px;
+margin: 0 auto 8px;
+display: block;
+}
+
+h1 {
+margin: 4px 0 4px;
+font-size: 1.6rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--prune);
+font-weight: 700;
+}
+
+.subtitle {
+font-size: 0.9rem;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.badge-top {
+display: inline-block;
+padding: 4px 12px;
+border-radius: 999px;
+background: rgba(95,18,63,0.08);
+color: var(--prune);
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 0.16em;
+margin-bottom: 6px;
+}
+
+.intro {
+font-size: 0.95rem;
+line-height: 1.6;
+text-align: center;
+max-width: 720px;
+margin: 0 auto 14px;
+}
+
+.countdown {
+margin: 10px auto 22px;
+padding: 10px 14px;
+max-width: 420px;
+border-radius: 999px;
+border: 1px solid rgba(95,18,63,0.25);
+background: rgba(95,18,63,0.05);
+font-size: 0.9rem;
+}
+
+.countdown strong {
+color: var(--prune);
+}
+
+.form-card {
+background: #fff;
+border-radius: 18px;
+padding: 18px 16px 20px;
+box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+max-width: 720px;
+margin: 0 auto;
+}
+
+h2 {
+margin: 0 0 12px;
+font-size: 1.25rem;
+color: var(--prune);
+text-align: left;
+}
+
+.field-group {
+margin-bottom: 14px;
+}
+
+label {
+display: block;
+font-size: 0.9rem;
+font-weight: 600;
+margin-bottom: 4px;
+}
+
+.field-group small {
+font-weight: 400;
+opacity: 0.7;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+width: 100%;
+padding: 10px 11px;
+border-radius: 10px;
+border: 1px solid rgba(25,11,20,0.18);
+font-size: 0.95rem;
+background: #faf7f0;
+}
+
+.radio-group {
+display: grid;
+gap: 8px;
+margin-top: 4px;
+}
+
+.radio-card {
+border-radius: 12px;
+border: 1px solid rgba(25,11,20,0.18);
+padding: 10px 11px;
+display: flex;
+align-items: center;
+gap: 8px;
+background: #faf7f0;
+}
+
+.radio-card input {
+transform: scale(1.1);
+}
+
+.radio-main {
+font-weight: 600;
+font-size: 0.95rem;
+}
+
+.radio-sub {
+font-size: 0.8rem;
+opacity: 0.8;
+}
+
+.notice {
+font-size: 0.8rem;
+opacity: 0.8;
+margin: 6px 0 0;
+}
+
+.btn-main {
+display: inline-block;
+padding: 12px 22px;
+border-radius: 999px;
+border: none;
+background: var(--prune);
+color: var(--beige);
+font-weight: 600;
+font-size: 1rem;
+cursor: pointer;
+margin-top: 6px;
+}
+
+.btn-main:hover {
+background: #851045;
+}
+
+.secure {
+font-size: 0.8rem;
+opacity: 0.85;
+margin-top: 6px;
+}
+
+.secure strong {
+color: var(--prune);
+}
+
+.back-link {
+text-align: center;
+margin-top: 20px;
+font-size: 0.9rem;
+}
+
+.back-link a {
+color: var(--prune);
+text-decoration: none;
+font-weight: 500;
+}
+
+.back-link a:hover {
+text-decoration: underline;
+}
+
+footer {
+margin-top: 18px;
+text-align: center;
+font-size: 0.8rem;
+opacity: 0.75;
+}
+
+@media (min-width: 720px) {
+.page { padding: 28px 10px 44px; }
+.form-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px 16px;
+}
+.form-grid .field-group {
+margin-bottom: 0;
+}
+}
+</style>
 </head>
+
 <body>
-<div class="wrap">
+<div class="page">
 
-  <header>
-    <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT">
-    <div class="subtitle">Pré-inscriptions officielles</div>
-    <h1>Fondatrices EMPOWERFIT</h1>
-    <p class="intro">
-      Deux niveaux d’engagement pour soutenir l’ouverture du studio EMPOWERFIT à Aix-en-Provence :
-      <strong>150 offres Fondatrices</strong> et <strong>10 places Annual Pack 1000 €</strong>.
-      Vous réservez votre place, sécurisez vos avantages et participez à la création d’un lieu dédié aux femmes qui veulent
-      s’élever physiquement et mentalement.
-    </p>
-  </header>
+<header>
+<img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
+<span class="badge-top">Pré-ouverture · Places fondatrices</span>
+<h1>Pré-inscriptions EMPOWERFIT</h1>
+<div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
 
-  <!-- CARTES RÉSUMÉ OFFRES -->
-  <div class="grid">
+<p class="intro">
+Bienvenue dans la pré-inscription officielle EMPOWERFIT. Vous êtes sur le point de rejoindre
+un espace pensé pour les femmes ambitieuses, exigeantes et déterminées à élever leur niveau
+physique, mental et énergétique. Les places fondatrices, dont 10 Premium, offrent un accès
+privilégié et une expérience exclusive. Merci de répondre avec précision : votre dossier de
+fondatrice sera généré immédiatement.
+</p>
 
-    <!-- OFFRE FONDATRICE 150 PLACES -->
-    <section class="card" id="offre-preouverture">
-      <div class="badge">OFFRE FONDATRICE</div>
-      <h2>Offre Fondatrice (150 places)</h2>
-      <p class="price">
-        Devenez l’une des <span>150 Fondatrices EMPOWERFIT</span> : bilan à tarif réduit, premier mois offert,
-        puis abonnement à prix préférentiel.
-      </p>
-      <p class="counter">
-        Places restantes : <strong>150</strong> / 150
-      </p>
-      <ul>
-        <li>Bilan complet à <strong>60 €</strong> (au lieu de 90 €) pour réserver votre place.</li>
-        <li>1er mois d’abonnement offert à l’ouverture.</li>
-        <li>Tarifs préférentiels garantis sur les abonnements :</li>
-        <ul>
-          <li><strong>Serenity</strong> : 100 €/mois (au lieu de 130 €)</li>
-          <li><strong>Balance</strong> : 130 €/mois (au lieu de 160 €)</li>
-          <li><strong>Infinity</strong> : 160 €/mois (au lieu de 190 €)</li>
-        </ul>
-      </ul>
-      <a class="cta" href="#details-preouverture">Détails & pré-inscription</a>
-    </section>
+<div class="countdown">
+<strong>Clôture des pré-inscriptions dans :</strong>
+<span id="countdown-text">calcul en cours…</span>
+</div>
+</header>
 
-    <!-- OFFRE PREMIUM 10 FONDATRICES -->
-    <section class="card" id="offre-premium">
-      <div class="badge gold">ANNUAL PACK 1000 €</div>
-      <h2>Annual Pack 1000 € (10 places)</h2>
-      <p class="price">
-        10 places Premium uniquement : <span>1000 €</span> la première année,
-        puis <span>100 €/mois à vie</span> (au lieu de 190 €).
-      </p>
-      <p class="counter">
-        Places restantes : <strong>10</strong> / 10
-      </p>
-      <ul>
-        <li>Accès et avantages de l’abonnement <strong>Infinity</strong> dès l’ouverture.</li>
-        <li><strong>Bilan d’ouverture à 90 € offert</strong> + <strong>1h de coaching individuel à 70 € offerte</strong>.</li>
-        <li><strong>Tarif Infinity bloqué à 100 €/mois à vie</strong>, tant que l’abonnement reste actif.</li>
-        <li>Statut <strong>Fondatrice Premium</strong>, bonus exclusifs et accès prioritaire.</li>
-      </ul>
-      <a class="cta" href="#details-premium">Détails & pré-inscription</a>
-    </section>
+<main class="form-card">
+<h2>Étape 1 · Vos informations</h2>
 
-  </div>
-
-  <!-- DÉTAILS OFFRE FONDATRICE 150 -->
-  <section class="steps" id="details-preouverture">
-    <h2 class="section-title">Détails — Offre Fondatrice (150 places)</h2>
-    <ol>
-      <li>
-        Vous réservez votre place en réglant un <strong>bilan complet à 60 €</strong> (au lieu de 90 €).
-        Ce bilan sera réalisé à l’ouverture du studio, avec tests, échange approfondi et plan personnalisé.
-      </li>
-      <li>
-        Votre <strong>premier mois d’abonnement est offert</strong> à l’ouverture.
-      </li>
-      <li>
-        Vous choisissez ensuite votre formule :
-        <ul>
-          <li><strong>Serenity</strong> : 100 €/mois (au lieu de 130 €)</li>
-          <li><strong>Balance</strong> : 130 €/mois (au lieu de 160 €)</li>
-          <li><strong>Infinity</strong> : 160 €/mois (au lieu de 190 €)</li>
-        </ul>
-      </li>
-      <li>
-        Le <strong>premier prélèvement</strong> a lieu le <strong>5 du mois suivant l’ouverture</strong> du studio.
-      </li>
-      <li>
-        Pour toutes les Fondatrices : accès au <strong>calendrier de l’avent / bonus en ligne EMPOWERFIT</strong>.
-      </li>
-    </ol>
-    <!-- 👉 Bouton WhatsApp pour réserver -->
-    <a class="cta" href="https://wa.me/33668613798" target="_blank">
-      Réserver ma place Fondatrice (bilan 60 €) via WhatsApp
-    </a>
-    <p class="note">
-      Votre place est confirmée après validation du paiement du bilan à 60 €. En cas de non-ouverture,
-      le montant est remboursé ou transformé en séance/coaching dans le studio actuel.
-    </p>
-  </section>
-
-  <!-- DÉTAILS OFFRE ANNUAL PACK 1000 -->
-  <section class="steps" id="details-premium">
-    <h2 class="section-title">Détails — Annual Pack 1000 € (10 places)</h2>
-    <ol>
-      <li>
-        Vous réglez un <strong>pack annuel à 1000 €</strong> pour la première année, incluant tous les avantages
-        de l’abonnement <strong>Infinity</strong> dès l’ouverture.
-      </li>
-      <li>
-        À partir de la deuxième année, vous bénéficiez d’un <strong>tarif Infinity bloqué à 100 €/mois à vie</strong>
-        (au lieu de 190 €), tant que votre abonnement reste actif.
-      </li>
-      <li>
-        Votre <strong>bilan d’ouverture à 90 € est offert</strong> + <strong>1h de coaching individuel à 70 € offerte</strong>.
-      </li>
-      <li>
-        Vous faites partie du cercle très restreint des <strong>Fondatrices Premium</strong> :
-        accès prioritaire aux créneaux, bonus exclusifs, invitations privilégiées aux événements EMPOWERFIT.
-      </li>
-      <li>
-        Accès également au <strong>calendrier de l’avent / bonus en ligne EMPOWERFIT</strong>.
-      </li>
-    </ol>
-    <!-- 👉 Bouton WhatsApp pour annual pack -->
-    <a class="cta" href="https://wa.me/33668613798" target="_blank">
-      Réserver mon Annual Pack 1000 € via WhatsApp
-    </a>
-    <p class="note">
-      Offre limitée à 10 femmes. Votre place est confirmée dès que nous validons votre règlement et votre contrat.
-      Les modalités de report ou de remboursement seront précisées dans votre contrat Fondatrice.
-    </p>
-  </section>
-
-  <!-- DOCUMENTS À TÉLÉCHARGER -->
-  <section class="docs" id="documents">
-    <h2>Documents Fondatrices à télécharger</h2>
-    <p>
-      Une fois votre pré-inscription validée, vous pourrez télécharger vos documents officiels EMPOWERFIT
-      (ou les recevoir par mail) :
-    </p>
-    <!-- 👉 À adapter aux vrais noms de fichiers une fois uploadés dans GitHub -->
-    <a class="cta" href="contrat-fondatrice-empowerfit.pdf" target="_blank">
-      📄 Contrat Fondatrice (PDF)
-    </a>
-    <a class="cta" href="certificat-fondatrice-empowerfit.pdf" target="_blank">
-      🏆 Certificat Fondatrice (PDF)
-    </a>
-    <p class="note">
-      Gardez ces documents précieusement : ils prouvent votre statut de Fondatrice EMPOWERFIT et vos avantages associés.
-    </p>
-  </section>
-
-  <a href="index.html" class="back-link">← Retour au hub EMPOWERFIT</a>
-
-  <footer>
-    EMPOWERFIT STUDIO · WP FIT UNLIMITED · 5 rue de la Fontaine · 13100 Aix-en-Provence
-  </footer>
-
+<form id="preinscription-form" novalidate>
+<div class="form-grid">
+<div class="field-group">
+<label for="prenom">Quel est votre prénom ? *</label>
+<input type="text" id="prenom" name="prenom" required>
 </div>
 
-<!-- Suivi des clics -->
+<div class="field-group">
+<label for="nom">Quel est votre nom de famille ? *</label>
+<input type="text" id="nom" name="nom" required>
+</div>
+
+<div class="field-group">
+<label for="email">Quelle est votre adresse e-mail ? *</label>
+<input type="email" id="email" name="email" required>
+</div>
+
+<div class="field-group">
+<label for="tel">Quel est votre numéro de téléphone ?</label>
+<input type="tel" id="tel" name="tel">
+</div>
+
+<div class="field-group">
+<label for="ville">Dans quelle ville résidez-vous ?</label>
+<input type="text" id="ville" name="ville">
+</div>
+
+<div class="field-group">
+<label for="dispo">À quel moment de la journée envisagez-vous idéalement de vous entraîner ?</label>
+<select id="dispo" name="dispo">
+<option value="">Sélectionnez…</option>
+<option value="matin">Matin</option>
+<option value="midi">Midi</option>
+<option value="soir">Soir</option>
+</select>
+</div>
+</div>
+
+<div class="field-group" style="margin-top:16px;">
+<label for="formule">Quelle formule d’abonnement vous attire aujourd’hui ? <small>(choix non définitif)</small></label>
+<select id="formule" name="formule">
+<option value="">Sélectionnez…</option>
+<option value="Serenity">Serenity — 2 séances / semaine</option>
+<option value="Balance">Balance — 3 séances / semaine</option>
+<option value="Infinity">Infinity — Illimité + Open Gym</option>
+</select>
+</div>
+
+<div class="field-group" style="margin-top:16px;">
+<label>Quelle offre fondatrice souhaitez-vous activer ? *</label>
+<div class="radio-group">
+<label class="radio-card">
+<input type="radio" name="offre" value="60" required>
+<div>
+<div class="radio-main">Offre Fondatrice — 60 €</div>
+<div class="radio-sub">150 places · Accès fondatrice à tarif préférentiel</div>
+</div>
+</label>
+
+<label class="radio-card">
+<input type="radio" name="offre" value="1000">
+<div>
+<div class="radio-main">Offre Fondatrice Premium — 1000 €</div>
+<div class="radio-sub">10 places · Formule annuelle premium + avantages exclusifs</div>
+</div>
+</label>
+</div>
+<p class="notice">
+Vous serez redirigée vers la page de paiement sécurisé correspondant à l’offre choisie.
+</p>
+</div>
+
+<button type="submit" class="btn-main">
+Étape 2 · Accéder au paiement sécurisé
+</button>
+<p class="secure">
+<strong>Paiement sécurisé Stripe.</strong> Vous recevrez une confirmation automatique à l’e-mail indiqué.
+</p>
+</form>
+</main>
+
+<div class="back-link">
+<a href="index.html">⟵ Revenir au hub EMPOWERFIT</a>
+</div>
+
+<footer>
+EMPOWERFIT STUDIO · Femmes 30+ · Fitérus Révolution
+</footer>
+</div>
+
 <script>
-  document.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("click", () => {
-      if (typeof gtag === 'function') {
-        gtag('event', 'click', {
-          event_category: 'Bouton',
-          event_label: el.textContent.trim()
-        });
-      }
-    });
-  });
+// 🔢 DÉCOMPTE TEMPS (MODIFIEZ LA DATE CI-DESSOUS SI BESOIN)
+(function() {
+// Exemple : clôture le 31 mars 2026 à 23h59
+const endDate = new Date("2026-03-31T23:59:00+01:00").getTime();
+const el = document.getElementById("countdown-text");
+
+function updateCountdown() {
+const now = new Date().getTime();
+const diff = endDate - now;
+
+if (diff <= 0) {
+el.textContent = "Pré-inscriptions clôturées.";
+return;
+}
+
+const jours = Math.floor(diff / (1000 * 60 * 60 * 24));
+const heures = Math.floor((diff / (1000 * 60 * 60)) % 24);
+const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+el.textContent = jours + " j " + heures + " h " + minutes + " min";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000); // mise à jour toutes les minutes
+})();
+
+// 🔗 REDIRECTION VERS STRIPE SELON L’OFFRE
+(function() {
+const STRIPE_60 = "https://buy.stripe.com/6oUfZgcdd1JU2Zyedp63K00";
+const STRIPE_1000 = "https://buy.stripe.com/14AfZga551JUgQo0mz63K01";
+
+const form = document.getElementById("preinscription-form");
+
+form.addEventListener("submit", function (e) {
+e.preventDefault();
+
+const prenom = form.prenom.value.trim();
+const nom = form.nom.value.trim();
+const email = form.email.value.trim();
+const offre = form.querySelector("input[name='offre']:checked");
+
+if (!prenom || !nom || !email || !offre) {
+alert("Veuillez remplir les champs obligatoires (prénom, nom, e-mail et offre choisie).");
+return;
+}
+
+// Ici on pourrait plus tard envoyer les données vers un backend ou un Google Sheets.
+
+const value = offre.value;
+if (value === "1000") {
+window.location.href = STRIPE_1000;
+} else {
+window.location.href = STRIPE_60;
+}
+});
+})();
 </script>
 
 </body>
