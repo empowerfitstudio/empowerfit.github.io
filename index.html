@@ -172,14 +172,6 @@
         }
     </style>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7H5Y96B6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2D7H5Y96B6');
-    </script>
 </head>
 
 <body>
@@ -189,9 +181,7 @@
         <img src="logo-simple-prune.png.png" class="logo" alt="Logo EMPOWERFIT">
         <h1>EMPOWERFIT STUDIO</h1>
         <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
-        <div class="tagline">
-            Méthode claire. Résultats concrets.<br>Yoga · Pilates · Musculation.
-        </div>
+        <div class="tagline">Méthode claire. Résultats concrets.<br>Yoga · Pilates · Musculation.</div>
 
         <div class="hero">
             <img src="accueil-empowerfit.jpg.png" alt="Accueil EMPOWERFIT">
@@ -209,43 +199,33 @@
 
     <div class="cards">
 
-        <!-- 1 — PLANNING & ABONNEMENTS -->
+        <!-- PLANNING & ABONNEMENTS -->
         <div class="card">
             <div class="badge">PLANNING & ABONNEMENTS</div>
             <h3>Cours efficaces, pas marketés</h3>
             <p>
-                Un planning épuré qui respecte vos cycles, votre énergie et vos objectifs.
+                Un planning épuré qui respecte vos cycles, votre énergie et vos objectifs.  
                 Power Yoga · Power Pilates · Power Fit.
             </p>
-            <a class="btn-secondary" href="planning-empowerfit.png" target="_blank">
-                Voir le planning
-            </a>
-            <a class="btn-secondary" href="abonnements.html">
-                Voir les abonnements
-            </a>
+            <a class="btn-secondary" href="planning-empowerfit.png" target="_blank">Voir le planning</a>
+            <a class="btn-secondary" href="abonnements.html">Voir les abonnements</a>
         </div>
 
-        <!-- 2 — LE STUDIO -->
+        <!-- STUDIO -->
         <div class="card">
             <div class="badge">LE STUDIO</div>
             <h3>Découvrir EMPOWERFIT Studio</h3>
-            <p>
-                Un espace premium dédié aux femmes, pensé pour la progression, la sécurité et la montée en puissance.
-                Ambiance cocooning, matériel haut de gamme et méthode EMPOWERFIT complète.
-            </p>
-            <a class="btn-secondary" href="https://nancomcy54-empowerfit-studio-pf3000.wpserveur.site/notre-studio/" target="_blank">
+            <p>Un espace premium, pensé pour la progression, la sécurité et la montée en puissance.</p>
+            <a class="btn-secondary" href="https://www.empowerfit-studio.fr/" target="_blank">
                 Découvrir le studio EMPOWERFIT
             </a>
         </div>
 
-        <!-- 3 — PROGRAMMES EN LIGNE -->
+        <!-- PROGRAMMES EN LIGNE -->
         <div class="card">
             <div class="badge">PROGRAMMES EN LIGNE</div>
             <h3>Coaching EMPOWERFIT à distance</h3>
-            <p>
-                Programmes premium pour femmes actives : prise de muscle, énergie féminine, longévité,
-                périnée, post-partum, pré-ménopause, ménopause. Coaching adapté et flexible.
-            </p>
+            <p>Prise de muscle, longévité, énergie féminine. Adapté à toutes les phases de vie.</p>
             <a class="btn-secondary" href="https://ig.me/m/fiterus.revolution" target="_blank">
                 Parler coaching en ligne
             </a>
@@ -258,20 +238,5 @@
     </footer>
 
 </div>
-
-<!-- Suivi des clics -->
-<script>
-  document.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("click", () => {
-      if (typeof gtag === 'function') {
-        gtag('event', 'click', {
-          event_category: 'Bouton',
-          event_label: el.textContent.trim()
-        });
-      }
-    });
-  });
-</script>
-
 </body>
 </html>
