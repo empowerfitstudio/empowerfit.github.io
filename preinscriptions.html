@@ -2,500 +2,472 @@
 <html lang="fr">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GFF0TB37EN"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFF0TB37EN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GFF0TB37EN');
+  </script>
 
-<script>
-window.dataLayer = window.dataLayer || [];
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pré-inscriptions fondatrices – EMPOWERFIT</title>
 
-function gtag() {
-  dataLayer.push(arguments);
-}
+  <style>
+    :root {
+      --prune: #5F123F;
+      --beige: #F5F0DA;
+      --noir: #190B14;
+      --rose: #FF4F79;
+    }
 
-gtag('js', new Date());
+    * { box-sizing: border-box; }
 
-gtag('config', 'G-GFF0TB37EN');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pré-inscriptions fondatrices – EMPOWERFIT</title>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--beige);
+      color: var(--noir);
+    }
 
-<style>
-:root {
---prune: #5F123F;
---beige: #F5F0DA;
---noir: #190B14;
---rose: #FF4F79;
-}
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
 
-* { box-sizing: border-box; }
+    header {
+      text-align: center;
+      padding: 12px 10px 18px;
+    }
 
-body {
-margin: 0;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-background-color: var(--beige);
-color: var(--noir);
-}
+    .logo {
+      max-width: 110px;
+      margin: 0 auto 8px;
+      display: block;
+    }
 
-.page {
-max-width: 960px;
-margin: 0 auto;
-padding: 24px 16px 40px;
-}
+    h1 {
+      margin: 4px 0 4px;
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--prune);
+      font-weight: 700;
+    }
 
-header {
-text-align: center;
-padding: 12px 10px 18px;
-}
+    .subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
-.logo {
-max-width: 110px;
-margin: 0 auto 8px;
-display: block;
-}
+    .badge-top {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(95,18,63,0.08);
+      color: var(--prune);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 6px;
+    }
 
-h1 {
-margin: 4px 0 4px;
-font-size: 1.6rem;
-letter-spacing: 0.08em;
-text-transform: uppercase;
-color: var(--prune);
-font-weight: 700;
-}
+    .intro {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 14px;
+    }
 
-.subtitle {
-font-size: 0.9rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-margin-bottom: 10px;
-}
+    .places-box {
+      margin: 18px auto 26px;
+      max-width: 760px;
+      padding: 22px;
+      border-radius: 28px;
+      background: rgba(95,18,63,0.05);
+      border: 1px solid rgba(95,18,63,0.16);
+    }
 
-.badge-top {
-display: inline-block;
-padding: 4px 12px;
-border-radius: 999px;
-background: rgba(95,18,63,0.08);
-color: var(--prune);
-font-size: 0.75rem;
-text-transform: uppercase;
-letter-spacing: 0.16em;
-margin-bottom: 6px;
-}
+    .places-title {
+      text-align: center;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--prune);
+      margin-bottom: 18px;
+    }
 
-.intro {
-font-size: 0.95rem;
-line-height: 1.6;
-text-align: center;
-max-width: 720px;
-margin: 0 auto 14px;
-}
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
 
-.countdown {
-margin: 10px auto 22px;
-padding: 10px 14px;
-max-width: 420px;
-border-radius: 999px;
-border: 1px solid rgba(95,18,63,0.25);
-background: rgba(95,18,63,0.05);
-font-size: 0.9rem;
-}
+    .place-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 18px 14px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(25,11,20,0.06);
+    }
 
-.countdown strong {
-color: var(--prune);
-}
+    .place-card.premium {
+      background: linear-gradient(180deg, rgba(95,18,63,0.07), rgba(255,255,255,1));
+      border: 1px solid rgba(95,18,63,0.18);
+    }
 
-.form-card {
-background: #fff;
-border-radius: 18px;
-padding: 18px 16px 20px;
-box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-max-width: 720px;
-margin: 0 auto;
-}
+    .place-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--prune);
+      margin-bottom: 8px;
+    }
 
-h2 {
-margin: 0 0 12px;
-font-size: 1.25rem;
-color: var(--prune);
-text-align: left;
-}
+    .place-count {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--noir);
+      margin-bottom: 6px;
+    }
 
-.field-group {
-margin-bottom: 14px;
-}
+    .place-desc {
+      font-size: 0.82rem;
+      opacity: 0.72;
+      line-height: 1.4;
+    }
 
-label {
-display: block;
-font-size: 0.9rem;
-font-weight: 600;
-margin-bottom: 4px;
-}
+    .form-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px 16px 20px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      max-width: 720px;
+      margin: 0 auto;
+    }
 
-.field-group small {
-font-weight: 400;
-opacity: 0.7;
-}
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: var(--prune);
+      text-align: left;
+    }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
-width: 100%;
-padding: 10px 11px;
-border-radius: 10px;
-border: 1px solid rgba(25,11,20,0.18);
-font-size: 0.95rem;
-background: #faf7f0;
-}
+    .field-group {
+      margin-bottom: 14px;
+    }
 
-.radio-group {
-display: grid;
-gap: 8px;
-margin-top: 4px;
-}
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
 
-.radio-card {
-border-radius: 12px;
-border: 1px solid rgba(25,11,20,0.18);
-padding: 10px 11px;
-display: flex;
-align-items: center;
-gap: 8px;
-background: #faf7f0;
-}
+    .field-group small {
+      font-weight: 400;
+      opacity: 0.7;
+    }
 
-.radio-card input {
-transform: scale(1.1);
-}
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px 11px;
+      border-radius: 10px;
+      border: 1px solid rgba(25,11,20,0.18);
+      font-size: 0.95rem;
+      background: #faf7f0;
+    }
 
-.radio-main {
-font-weight: 600;
-font-size: 0.95rem;
-}
+    .radio-group {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
 
-.radio-sub {
-font-size: 0.8rem;
-opacity: 0.8;
-}
+    .radio-card {
+      border-radius: 12px;
+      border: 1px solid rgba(25,11,20,0.18);
+      padding: 10px 11px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #faf7f0;
+    }
 
-.notice {
-font-size: 0.8rem;
-opacity: 0.8;
-margin: 6px 0 0;
-}
+    .radio-card input {
+      transform: scale(1.1);
+    }
 
-.btn-main {
-display: inline-block;
-padding: 12px 22px;
-border-radius: 999px;
-border: none;
-background: var(--prune);
-color: var(--beige);
-font-weight: 600;
-font-size: 1rem;
-cursor: pointer;
-margin-top: 6px;
-}
+    .radio-main {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
 
-.btn-main:hover {
-background: #851045;
-}
+    .radio-sub {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
 
-.secure {
-font-size: 0.8rem;
-opacity: 0.85;
-margin-top: 6px;
-}
+    .notice {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin: 6px 0 0;
+    }
 
-.secure strong {
-color: var(--prune);
-}
+    .btn-main {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: none;
+      background: var(--prune);
+      color: var(--beige);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 6px;
+    }
 
-.back-link {
-text-align: center;
-margin-top: 20px;
-font-size: 0.9rem;
-}
+    .btn-main:hover {
+      background: #851045;
+    }
 
-.back-link a {
-color: var(--prune);
-text-decoration: none;
-font-weight: 500;
-}
+    .secure {
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-top: 6px;
+    }
 
-.back-link a:hover {
-text-decoration: underline;
-}
+    .secure strong {
+      color: var(--prune);
+    }
 
-footer {
-margin-top: 18px;
-text-align: center;
-font-size: 0.8rem;
-opacity: 0.75;
-}
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
 
-@media (min-width: 720px) {
-.page { padding: 28px 10px 44px; }
-.form-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 12px 16px;
-}
-.form-grid .field-group {
-margin-bottom: 0;
-}
-}
-</style>
+    .back-link a {
+      color: var(--prune);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+
+    @media (min-width: 720px) {
+      .page { padding: 28px 10px 44px; }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 16px;
+      }
+
+      .form-grid .field-group {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .places-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 <div class="page">
 
-<header>
-<img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
-<span class="badge-top">Pré-ouverture · Places fondatrices</span>
-<h1>Pré-inscriptions EMPOWERFIT</h1>
-<div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
+  <header>
+    <img src="logo-simple-prune.png.png" alt="Logo EMPOWERFIT" class="logo">
+    <span class="badge-top">Pré-ouverture · Places fondatrices</span>
+    <h1>Pré-inscriptions EMPOWERFIT</h1>
+    <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
 
-<p class="intro">
-Bienvenue dans la pré-inscription officielle EMPOWERFIT. Vous êtes sur le point de rejoindre
-un espace pensé pour les femmes ambitieuses, exigeantes et déterminées à élever leur niveau
-physique, mental et énergétique. Les places fondatrices, dont 10 Premium, offrent un accès
-privilégié et une expérience exclusive. Merci de répondre avec précision : votre dossier de
-fondatrice sera généré immédiatement.
-</p>
+    <p class="intro">
+      Bienvenue dans la pré-inscription officielle EMPOWERFIT. Vous êtes sur le point de rejoindre
+      un espace pensé pour les femmes ambitieuses, exigeantes et déterminées à élever leur niveau
+      physique, mental et énergétique. Les places fondatrices, dont 10 Premium, offrent un accès
+      privilégié et une expérience exclusive. Merci de répondre avec précision : votre dossier de
+      fondatrice sera généré immédiatement.
+    </p>
 
-<div class="places-box">
+    <div class="places-box">
+      <div class="places-title">Places fondatrices restantes</div>
 
-<div class="places-title">
-PLACES FONDATRICES RESTANTES
-</div>
+      <div class="places-grid">
+        <div class="place-card">
+          <div class="place-name">Serenity</div>
+          <div class="place-count">15 places restantes</div>
+          <div class="place-desc">2 séances / semaine</div>
+        </div>
 
-<div class="places-grid">
+        <div class="place-card">
+          <div class="place-name">Balance</div>
+          <div class="place-count">15 places restantes</div>
+          <div class="place-desc">3 séances / semaine</div>
+        </div>
 
-<div class="place-card">
-<div class="place-name">SERENITY</div>
-<div class="place-count">15 places restantes</div>
-<div class="place-desc">
-2 séances / semaine
-</div>
-</div>
+        <div class="place-card premium">
+          <div class="place-name">Infinity</div>
+          <div class="place-count">10 places restantes</div>
+          <div class="place-desc">Illimité + Open Gym</div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="place-card">
-<div class="place-name">BALANCE</div>
-<div class="place-count">15 places restantes</div>
-<div class="place-desc">
-3 séances / semaine
-</div>
-</div>
+  <main class="form-card">
+    <h2>Étape 1 · Vos informations</h2>
 
-<div class="place-card premium">
-<div class="place-name">INFINITY</div>
-<div class="place-count">10 places restantes</div>
-<div class="place-desc">
-Illimité + Open Gym
-</div>
-</div>
+    <form id="preinscription-form" novalidate>
+      <div class="form-grid">
+        <div class="field-group">
+          <label for="prenom">Quel est votre prénom ? *</label>
+          <input type="text" id="prenom" name="prenom" required>
+        </div>
 
-</div>
-</div>
-</header>
-.places-box {
-margin: 18px auto 26px;
-max-width: 760px;
-padding: 22px;
-border-radius: 28px;
-background: rgba(95,18,63,0.05);
-border: 1px solid rgba(95,18,63,0.16);
-}
+        <div class="field-group">
+          <label for="nom">Quel est votre nom de famille ? *</label>
+          <input type="text" id="nom" name="nom" required>
+        </div>
 
-.places-title {
-text-align: center;
-font-size: 0.95rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-font-weight: 700;
-color: var(--prune);
-margin-bottom: 18px;
-}
+        <div class="field-group">
+          <label for="email">Quelle est votre adresse e-mail ? *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-.places-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 14px;
-}
+        <div class="field-group">
+          <label for="tel">Quel est votre numéro de téléphone ?</label>
+          <input type="tel" id="tel" name="tel">
+        </div>
 
-.place-card {
-background: #fff;
-border-radius: 20px;
-padding: 18px 14px;
-text-align: center;
-box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-border: 1px solid rgba(25,11,20,0.06);
-}
+        <div class="field-group">
+          <label for="ville">Dans quelle ville résidez-vous ?</label>
+          <input type="text" id="ville" name="ville">
+        </div>
 
-.place-card.premium {
-background: linear-gradient(
-180deg,
-rgba(95,18,63,0.07),
-rgba(255,255,255,1)
-);
-border: 1px solid rgba(95,18,63,0.18);
-}
+        <div class="field-group">
+          <label for="dispo">À quel moment de la journée envisagez-vous idéalement de vous entraîner ?</label>
+          <select id="dispo" name="dispo">
+            <option value="">Sélectionnez…</option>
+            <option value="matin">Matin</option>
+            <option value="midi">Midi</option>
+            <option value="soir">Soir</option>
+          </select>
+        </div>
+      </div>
 
-.place-name {
-font-size: 0.95rem;
-font-weight: 700;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-color: var(--prune);
-margin-bottom: 8px;
-}
+      <div class="field-group" style="margin-top:16px;">
+        <label for="formule">Quelle formule d’abonnement vous attire aujourd’hui ? <small>(choix non définitif)</small></label>
+        <select id="formule" name="formule">
+          <option value="">Sélectionnez…</option>
+          <option value="Serenity">Serenity — 2 séances / semaine</option>
+          <option value="Balance">Balance — 3 séances / semaine</option>
+          <option value="Infinity">Infinity — Illimité + Open Gym</option>
+        </select>
+      </div>
 
-.place-count {
-font-size: 1.15rem;
-font-weight: 700;
-color: var(--noir);
-margin-bottom: 6px;
-}
+      <div class="field-group" style="margin-top:16px;">
+        <label>Quelle offre fondatrice souhaitez-vous activer ? *</label>
 
-.place-desc {
-font-size: 0.82rem;
-opacity: 0.72;
-line-height: 1.4;
-}
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="offre" value="60" required>
+            <div>
+              <div class="radio-main">Offre Fondatrice — 60 €</div>
+              <div class="radio-sub">150 places · Accès fondatrice à tarif préférentiel</div>
+            </div>
+          </label>
 
-@media (max-width: 720px) {
+          <label class="radio-card">
+            <input type="radio" name="offre" value="1000">
+            <div>
+              <div class="radio-main">Offre Fondatrice Premium — 1000 €</div>
+              <div class="radio-sub">10 places · Formule annuelle premium + avantages exclusifs</div>
+            </div>
+          </label>
+        </div>
 
-.places-grid {
-grid-template-columns: 1fr;
-}
+        <p class="notice">
+          Vous serez redirigée vers la page de paiement sécurisé correspondant à l’offre choisie.
+        </p>
+      </div>
 
-}
-<main class="form-card">
-<h2>Étape 1 · Vos informations</h2>
+      <button type="submit" class="btn-main">
+        Étape 2 · Accéder au paiement sécurisé
+      </button>
 
-<form id="preinscription-form" novalidate>
-<div class="form-grid">
-<div class="field-group">
-<label for="prenom">Quel est votre prénom ? *</label>
-<input type="text" id="prenom" name="prenom" required>
-</div>
+      <p class="secure">
+        <strong>Paiement sécurisé Stripe.</strong> Vous recevrez une confirmation automatique à l’e-mail indiqué.
+      </p>
+    </form>
+  </main>
 
-<div class="field-group">
-<label for="nom">Quel est votre nom de famille ? *</label>
-<input type="text" id="nom" name="nom" required>
-</div>
+  <div class="back-link">
+    <a href="index.html">⟵ Revenir au hub EMPOWERFIT</a>
+  </div>
 
-<div class="field-group">
-<label for="email">Quelle est votre adresse e-mail ? *</label>
-<input type="email" id="email" name="email" required>
-</div>
-
-<div class="field-group">
-<label for="tel">Quel est votre numéro de téléphone ?</label>
-<input type="tel" id="tel" name="tel">
-</div>
-
-<div class="field-group">
-<label for="ville">Dans quelle ville résidez-vous ?</label>
-<input type="text" id="ville" name="ville">
-</div>
-
-<div class="field-group">
-<label for="dispo">À quel moment de la journée envisagez-vous idéalement de vous entraîner ?</label>
-<select id="dispo" name="dispo">
-<option value="">Sélectionnez…</option>
-<option value="matin">Matin</option>
-<option value="midi">Midi</option>
-<option value="soir">Soir</option>
-</select>
-</div>
-</div>
-
-<div class="field-group" style="margin-top:16px;">
-<label for="formule">Quelle formule d’abonnement vous attire aujourd’hui ? <small>(choix non définitif)</small></label>
-<select id="formule" name="formule">
-<option value="">Sélectionnez…</option>
-<option value="Serenity">Serenity — 2 séances / semaine</option>
-<option value="Balance">Balance — 3 séances / semaine</option>
-<option value="Infinity">Infinity — Illimité + Open Gym</option>
-</select>
-</div>
-
-<div class="field-group" style="margin-top:16px;">
-<label>Quelle offre fondatrice souhaitez-vous activer ? *</label>
-<div class="radio-group">
-<label class="radio-card">
-<input type="radio" name="offre" value="60" required>
-<div>
-<div class="radio-main">Offre Fondatrice — 60 €</div>
-<div class="radio-sub">150 places · Accès fondatrice à tarif préférentiel</div>
-</div>
-</label>
-
-<label class="radio-card">
-<input type="radio" name="offre" value="1000">
-<div>
-<div class="radio-main">Offre Fondatrice Premium — 1000 €</div>
-<div class="radio-sub">10 places · Formule annuelle premium + avantages exclusifs</div>
-</div>
-</label>
-</div>
-<p class="notice">
-Vous serez redirigée vers la page de paiement sécurisé correspondant à l’offre choisie.
-</p>
-</div>
-
-<button type="submit" class="btn-main">
-Étape 2 · Accéder au paiement sécurisé
-</button>
-<p class="secure">
-<strong>Paiement sécurisé Stripe.</strong> Vous recevrez une confirmation automatique à l’e-mail indiqué.
-</p>
-</form>
-</main>
-
-<div class="back-link">
-<a href="index.html">⟵ Revenir au hub EMPOWERFIT</a>
-</div>
-
-<footer>
-EMPOWERFIT STUDIO · Femmes 30+ · Fitérus Révolution
-</footer>
+  <footer>
+    EMPOWERFIT STUDIO · Femmes 30+ · Fitérus Révolution
+  </footer>
 </div>
 
 <script>
-
-
-// 🔗 REDIRECTION VERS STRIPE SELON L’OFFRE
 (function() {
-const STRIPE_60 = "https://buy.stripe.com/6oUfZgcdd1JU2Zyedp63K00";
-const STRIPE_1000 = "https://buy.stripe.com/14AfZga551JUgQo0mz63K01";
+  const STRIPE_60 = "https://buy.stripe.com/6oUfZgcdd1JU2Zyedp63K00";
+  const STRIPE_1000 = "https://buy.stripe.com/14AfZga551JUgQo0mz63K01";
 
-const form = document.getElementById("preinscription-form");
+  const form = document.getElementById("preinscription-form");
 
-form.addEventListener("submit", function (e) {
-e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-const prenom = form.prenom.value.trim();
-const nom = form.nom.value.trim();
-const email = form.email.value.trim();
-const offre = form.querySelector("input[name='offre']:checked");
+    const prenom = form.prenom.value.trim();
+    const nom = form.nom.value.trim();
+    const email = form.email.value.trim();
+    const offre = form.querySelector("input[name='offre']:checked");
 
-if (!prenom || !nom || !email || !offre) {
-alert("Veuillez remplir les champs obligatoires (prénom, nom, e-mail et offre choisie).");
-return;
-}
+    if (!prenom || !nom || !email || !offre) {
+      alert("Veuillez remplir les champs obligatoires (prénom, nom, e-mail et offre choisie).");
+      return;
+    }
 
-// Ici on pourrait plus tard envoyer les données vers un backend ou un Google Sheets.
+    const value = offre.value;
 
-const value = offre.value;
-if (value === "1000") {
-window.location.href = STRIPE_1000;
-} else {
-window.location.href = STRIPE_60;
-}
-});
+    gtag('event', 'submit_preinscription', {
+      event_category: 'Formulaire',
+      event_label: value === "1000" ? "Fondatrice Premium 1000" : "Fondatrice 60"
+    });
+
+    if (value === "1000") {
+      window.location.href = STRIPE_1000;
+    } else {
+      window.location.href = STRIPE_60;
+    }
+  });
 })();
 </script>
 
