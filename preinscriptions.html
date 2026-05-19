@@ -264,12 +264,113 @@ privilégié et une expérience exclusive. Merci de répondre avec précision : 
 fondatrice sera généré immédiatement.
 </p>
 
-<div class="countdown">
-<strong>Clôture des pré-inscriptions dans :</strong>
-<span id="countdown-text">calcul en cours…</span>
+<div class="places-box">
+
+<div class="places-title">
+PLACES FONDATRICES RESTANTES
+</div>
+
+<div class="places-grid">
+
+<div class="place-card">
+<div class="place-name">SERENITY</div>
+<div class="place-count">15 places restantes</div>
+<div class="place-desc">
+2 séances / semaine
+</div>
+</div>
+
+<div class="place-card">
+<div class="place-name">BALANCE</div>
+<div class="place-count">15 places restantes</div>
+<div class="place-desc">
+3 séances / semaine
+</div>
+</div>
+
+<div class="place-card premium">
+<div class="place-name">INFINITY</div>
+<div class="place-count">10 places restantes</div>
+<div class="place-desc">
+Illimité + Open Gym
+</div>
+</div>
+
+</div>
 </div>
 </header>
+.places-box {
+margin: 18px auto 26px;
+max-width: 760px;
+padding: 22px;
+border-radius: 28px;
+background: rgba(95,18,63,0.05);
+border: 1px solid rgba(95,18,63,0.16);
+}
 
+.places-title {
+text-align: center;
+font-size: 0.95rem;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+font-weight: 700;
+color: var(--prune);
+margin-bottom: 18px;
+}
+
+.places-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
+}
+
+.place-card {
+background: #fff;
+border-radius: 20px;
+padding: 18px 14px;
+text-align: center;
+box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+border: 1px solid rgba(25,11,20,0.06);
+}
+
+.place-card.premium {
+background: linear-gradient(
+180deg,
+rgba(95,18,63,0.07),
+rgba(255,255,255,1)
+);
+border: 1px solid rgba(95,18,63,0.18);
+}
+
+.place-name {
+font-size: 0.95rem;
+font-weight: 700;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--prune);
+margin-bottom: 8px;
+}
+
+.place-count {
+font-size: 1.15rem;
+font-weight: 700;
+color: var(--noir);
+margin-bottom: 6px;
+}
+
+.place-desc {
+font-size: 0.82rem;
+opacity: 0.72;
+line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+
+.places-grid {
+grid-template-columns: 1fr;
+}
+
+}
 <main class="form-card">
 <h2>Étape 1 · Vos informations</h2>
 
@@ -364,31 +465,7 @@ EMPOWERFIT STUDIO · Femmes 30+ · Fitérus Révolution
 </div>
 
 <script>
-// 🔢 DÉCOMPTE TEMPS (MODIFIEZ LA DATE CI-DESSOUS SI BESOIN)
-(function() {
-// Exemple : clôture le 31 mars 2026 à 23h59
-const endDate = new Date("2026-03-31T23:59:00+01:00").getTime();
-const el = document.getElementById("countdown-text");
 
-function updateCountdown() {
-const now = new Date().getTime();
-const diff = endDate - now;
-
-if (diff <= 0) {
-el.textContent = "Pré-inscriptions clôturées.";
-return;
-}
-
-const jours = Math.floor(diff / (1000 * 60 * 60 * 24));
-const heures = Math.floor((diff / (1000 * 60 * 60)) % 24);
-const minutes = Math.floor((diff / (1000 * 60)) % 60);
-
-el.textContent = jours + " j " + heures + " h " + minutes + " min";
-}
-
-updateCountdown();
-setInterval(updateCountdown, 60000); // mise à jour toutes les minutes
-})();
 
 // 🔗 REDIRECTION VERS STRIPE SELON L’OFFRE
 (function() {
