@@ -110,12 +110,22 @@
     }
 
     .place-card {
+      display: block;
       background: #fff;
       border-radius: 20px;
       padding: 18px 14px;
       text-align: center;
       box-shadow: 0 10px 24px rgba(0,0,0,0.06);
       border: 1px solid rgba(25,11,20,0.06);
+      color: var(--noir);
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .place-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+      border-color: rgba(95,18,63,0.24);
     }
 
     .place-card.premium {
@@ -129,20 +139,31 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--prune);
-      margin-bottom: 8px;
+      margin-bottom: 2px;
+      line-height: 1.1;
+    }
+
+    .place-desc {
+      font-size: 0.82rem;
+      opacity: 0.72;
+      line-height: 1.2;
+      margin-bottom: 10px;
     }
 
     .place-count {
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--noir);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .place-desc {
-      font-size: 0.82rem;
-      opacity: 0.72;
-      line-height: 1.4;
+    .place-cta {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.78rem;
+      color: var(--prune);
+      font-weight: 700;
+      border-bottom: 1px solid var(--prune);
     }
 
     .form-card {
@@ -226,7 +247,8 @@
     }
 
     .btn-main {
-      display: inline-block;
+      display: block;
+      margin: 18px auto 0;
       padding: 12px 22px;
       border-radius: 999px;
       border: none;
@@ -235,7 +257,7 @@
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
-      margin-top: 6px;
+      text-align: center;
     }
 
     .btn-main:hover {
@@ -245,7 +267,8 @@
     .secure {
       font-size: 0.8rem;
       opacity: 0.85;
-      margin-top: 6px;
+      margin-top: 10px;
+      text-align: center;
     }
 
     .secure strong {
@@ -307,42 +330,52 @@
     <div class="subtitle">FEMMES 30+ · AIX-EN-PROVENCE</div>
 
     <p class="intro">
-Bienvenue dans la <strong>pré-inscription officielle EMPOWERFIT</strong>.
-Vous êtes sur le point de rejoindre un espace pensé pour les femmes
-<strong>ambitieuses, exigeantes et déterminées</strong> à élever leur niveau
-<strong>physique, mental et énergétique</strong>.
+      Bienvenue dans la <strong>pré-inscription officielle EMPOWERFIT</strong>.
+      Vous êtes sur le point de rejoindre un espace pensé pour les femmes
+      <strong>ambitieuses, exigeantes et déterminées</strong> à élever leur niveau
+      <strong>physique, mental et énergétique</strong>. Les <strong>places fondatrices</strong>,
+      dont <strong>10 Premium</strong>, offrent un <strong>accès privilégié</strong> et une
+      <strong>expérience exclusive</strong>. Merci de répondre avec précision :
+      <strong>votre dossier de fondatrice sera généré immédiatement.</strong>
+    </p>
 
-Les <strong>places fondatrices</strong>, dont <strong>10 Premium</strong>,
-offrent un <strong>accès privilégié</strong> et une
-<strong>expérience exclusive</strong>.
+    <div class="places-box">
+      <div class="places-title">Places fondatrices restantes</div>
 
-Merci de répondre avec précision :
-<strong>votre dossier de fondatrice sera généré immédiatement.</strong>
-</p>
+      <div class="places-grid">
 
-    <div class="places-grid">
+        <a class="place-card"
+           href="https://buy.stripe.com/6oUfZgcdd1JU2Zyedp63K00"
+           target="_blank"
+           onclick="gtag('event', 'click_stripe_serenity', { event_category: 'Stripe', event_label: 'Serenity 60' });">
+          <div class="place-name">SERENITY</div>
+          <div class="place-desc">2 séances / semaine</div>
+          <div class="place-count">15 places restantes</div>
+          <div class="place-cta">Réserver Serenity</div>
+        </a>
 
-<div class="place-card">
-<div class="place-name">SERENITY</div>
-<div class="place-desc">2 séances / semaine</div>
-<div class="place-count">15 places restantes</div>
-</div>
+        <a class="place-card"
+           href="https://buy.stripe.com/6oUfZgcdd1JU2Zyedp63K00"
+           target="_blank"
+           onclick="gtag('event', 'click_stripe_balance', { event_category: 'Stripe', event_label: 'Balance 60' });">
+          <div class="place-name">BALANCE</div>
+          <div class="place-desc">3 séances / semaine</div>
+          <div class="place-count">15 places restantes</div>
+          <div class="place-cta">Réserver Balance</div>
+        </a>
 
-<div class="place-card">
-<div class="place-name">BALANCE</div>
-<div class="place-desc">3 séances / semaine</div>
-<div class="place-count">15 places restantes</div>
-</div>
+        <a class="place-card premium"
+           href="https://buy.stripe.com/14AfZga551JUgQo0mz63K01"
+           target="_blank"
+           onclick="gtag('event', 'click_stripe_infinity', { event_category: 'Stripe', event_label: 'Infinity 1000' });">
+          <div class="place-name">INFINITY</div>
+          <div class="place-desc">Illimité + Open Gym</div>
+          <div class="place-count">10 places restantes</div>
+          <div class="place-cta">Réserver Infinity</div>
+        </a>
 
-<div class="place-card premium">
-<div class="place-name">INFINITY</div>
-<div class="place-desc">Illimité + Open Gym</div>
-<div class="place-count">10 places restantes</div>
-</div>
-
-</div>
-
-     
+      </div>
+    </div>
   </header>
 
   <main class="form-card">
@@ -404,7 +437,7 @@ Merci de répondre avec précision :
             <input type="radio" name="offre" value="60" required>
             <div>
               <div class="radio-main">Offre Fondatrice — 60 €</div>
-              <div class="radio-sub">150 places · Accès fondatrice à tarif préférentiel</div>
+              <div class="radio-sub">Serenity ou Balance · Accès fondatrice à tarif préférentiel</div>
             </div>
           </label>
 
@@ -412,7 +445,7 @@ Merci de répondre avec précision :
             <input type="radio" name="offre" value="1000">
             <div>
               <div class="radio-main">Offre Fondatrice Premium — 1000 €</div>
-              <div class="radio-sub">10 places · Formule annuelle premium + avantages exclusifs</div>
+              <div class="radio-sub">Infinity · Formule annuelle premium + avantages exclusifs</div>
             </div>
           </label>
         </div>
@@ -422,9 +455,9 @@ Merci de répondre avec précision :
         </p>
       </div>
 
-    .btn-main {
-display: block;
-margin: 18px auto 0;
+      <button type="submit" class="btn-main">
+        Étape 2 · Accéder au paiement sécurisé
+      </button>
 
       <p class="secure">
         <strong>Paiement sécurisé Stripe.</strong> Vous recevrez une confirmation automatique à l’e-mail indiqué.
