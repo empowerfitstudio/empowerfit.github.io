@@ -481,22 +481,71 @@
 
   const form = document.getElementById("preinscription-form");
 
-  form.addEventListener("submit", function (e) {
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function cleanPhone(phone) {
+    return phone.replace(/\D/g, "");
+  }
+
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     const prenom = form.prenom.value.trim();
     const nom = form.nom.value.trim();
     const email = form.email.value.trim();
+    const tel = form.tel.value.trim();
+    const ville = form.ville.value.trim();
+    const dispo = form.dispo.value;
+    const formule = form.formule.value;
     const offre = form.querySelector("input[name='offre']:checked");
 
-    if (!prenom || !nom || !email || !offre) {
-      alert("Veuillez remplir les champs obligatoires (prénom, nom, e-mail et offre choisie).");
+    const telDigits = cleanPhone(tel);
+
+    if (!prenom) {
+      alert("Veuillez indiquer votre prénom.");
+      return;
+    }
+
+    if (!nom) {
+      alert("Veuillez indiquer votre nom de famille.");
+      return;
+    }
+
+    if (!email || !isValidEmail(email)) {
+      alert("Veuillez indiquer une adresse e-mail valide.");
+      return;
+    }
+
+    if (!tel || telDigits.length < 10) {
+      alert("Veuillez indiquer un numéro de téléphone valide.");
+      return;
+    }
+
+    if (!ville) {
+      alert("Veuillez indiquer votre ville.");
+      return;
+    }
+
+    if (!dispo) {
+      alert("Veuillez sélectionner le moment idéal pour vous entraîner.");
+      return;
+    }
+
+    if (!formule) {
+      alert("Veuillez sélectionner la formule qui vous attire aujourd’hui.");
+      return;
+    }
+
+    if (!offre) {
+      alert("Veuillez sélectionner une offre fondatrice.");
       return;
     }
 
     const value = offre.value;
 
-    gtag('event', 'submit_preinscription', {
+    gtag('event', 'submit_preinscription_validated', {
       event_category: 'Formulaire',
       event_label: value === "1000" ? "Fondatrice Premium 1000" : "Fondatrice 60"
     });
@@ -509,6 +558,3 @@
   });
 })();
 </script>
-
-</body>
-</html>
