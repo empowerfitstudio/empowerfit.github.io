@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-GFF0TB37EN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFF0TB37EN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GFF0TB37EN');
+    </script>
 
-  gtag('config', 'G-GFF0TB37EN');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMPOWERFIT — Hub officiel</title>
@@ -197,7 +198,6 @@
             .card { height: 100%; }
         }
     </style>
-
 </head>
 
 <body>
@@ -213,14 +213,10 @@
             <img src="accueil-empowerfit.jpg.png" alt="Accueil EMPOWERFIT">
         </div>
 
-        <a class="btn-main"
-href="offre-fondatrice.html"
-onclick="gtag('event', 'click_offre_fondatrice', {
-  event_category: 'CTA',
-  event_label: 'Offre Fondatrice'
-});">
+        <a class="btn-main" href="offre-fondatrice.html" onclick="gtag('event', 'click_offre_fondatrice', { event_category: 'CTA', event_label: 'Offre Fondatrice' });">
             Accéder aux offres fondatrices EMPOWERFIT
         </a>
+
         <div class="cta-caption">
             Offres limitées · Statut Fondatrice · Accès prioritaire.
         </div>
@@ -236,56 +232,44 @@ onclick="gtag('event', 'click_offre_fondatrice', {
 
             <p>Les <strong>10 places Premium</strong> incluent un <strong>tarif réduit à vie</strong>, un <strong>bilan offert</strong> ainsi qu’<strong>un accompagnement exclusif</strong> réservé uniquement à <strong>quelques femmes déterminées à prendre place</strong> : vous participez activement à la création du studio.</p>
 
-           <p>
-👉 Ces offres ne reviendront plus jamais,
-<a href="preinscriptions.html" style="color:#5F123F; font-weight:600; text-decoration:none; border-bottom:2px solid #5F123F;">
-cliquez ici pour réserver votre place fondatrice
-</a>.
-</p>
-
+            <p>
+                👉 Ces offres ne reviendront plus jamais,
+                <a href="preinscriptions.html" onclick="gtag('event', 'click_preinscriptions_texte', { event_category: 'CTA', event_label: 'Lien texte préinscriptions' });" style="color:#5F123F; font-weight:600; text-decoration:none; border-bottom:2px solid #5F123F;">
+                    cliquez ici pour réserver votre place fondatrice
+                </a>.
+            </p>
+        </div>
     </header>
 
     <h2 class="section-title">Votre espace central EMPOWERFIT</h2>
 
     <div class="cards">
 
-        <!-- PLANNING & ABONNEMENTS -->
         <div class="card">
             <div class="badge">PLANNING & ABONNEMENTS</div>
             <h3>Cours efficaces, pas marketés</h3>
             <p>
-                Un planning épuré qui respecte vos cycles, votre énergie et vos objectifs.  
+                Un planning épuré qui respecte vos cycles, votre énergie et vos objectifs.
                 Power Yoga · Power Pilates · Power Fit.
             </p>
-            <a class="btn-secondary"
-href="planning.html"
-onclick="gtag('event', 'click_planning', {
-event_category: 'CTA',
-event_label: 'Planning'
-});">
-            <<a class="btn-secondary"
-href="abonnements.html"
-onclick="gtag('event', 'click_abonnements', {
-event_category: 'CTA',
-event_label: 'Abonnements'
-});">
+            <a class="btn-secondary" href="planning.html" target="_blank" onclick="gtag('event', 'click_planning', { event_category: 'CTA', event_label: 'Planning' });">Voir le planning</a>
+            <a class="btn-secondary" href="abonnements.html" onclick="gtag('event', 'click_abonnements', { event_category: 'CTA', event_label: 'Abonnements' });">Voir les abonnements</a>
+        </div>
 
-        <!-- STUDIO -->
         <div class="card">
             <div class="badge">LE STUDIO</div>
             <h3>Découvrir EMPOWERFIT Studio</h3>
             <p>Un espace premium, pensé pour la progression, la sécurité et la montée en puissance.</p>
-            <a class="btn-secondary" href="https://www.empowerfit-studio.fr/" target="_blank">
+            <a class="btn-secondary" href="https://www.empowerfit-studio.fr/" target="_blank" onclick="gtag('event', 'click_site_principal', { event_category: 'External', event_label: 'Site principal EMPOWERFIT' });">
                 Découvrir le studio EMPOWERFIT
             </a>
         </div>
 
-        <!-- PROGRAMMES EN LIGNE -->
         <div class="card">
             <div class="badge">PROGRAMMES EN LIGNE</div>
             <h3>Coaching EMPOWERFIT à distance</h3>
             <p>Prise de muscle, longévité, énergie féminine. Adapté à toutes les phases de vie.</p>
-            <a class="btn-secondary" href="https://ig.me/m/fiterus.revolution" target="_blank">
+            <a class="btn-secondary" href="https://ig.me/m/fiterus.revolution" target="_blank" onclick="gtag('event', 'click_instagram_dm', { event_category: 'Social', event_label: 'Instagram DM' });">
                 Parler coaching en ligne
             </a>
         </div>
@@ -299,9 +283,3 @@ event_label: 'Abonnements'
 </div>
 </body>
 </html>
-
-
-
-
-
-
